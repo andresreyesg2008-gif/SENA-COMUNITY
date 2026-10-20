@@ -1,0 +1,30 @@
+Cristhian Andres Montero
+1 Gestión de documentos
+2 Gestión de enlaces
+3 Historial de registros
+4 Registro de novedades
+5 Consulta de novedades
+Ronal Santiago Correa Peña
+6 Registro de usuarios.
+7 Inicio de sesión
+8 Gestión de usuarios
+9 Gestión de Roles
+10 Gestión de fichas
+Andres David Reyes Garcia
+11 Registro de integrantes
+12 Gestión de voceros
+13 Búsqueda de información
+14 Filtrado de información
+15 Actualización de información
+Orledys Paola Garcia Rodriguez
+16 Registro de inasistencias    
+17 Publicación de comunicados
+18 Consulta de comunicados
+19 Notificaciones
+20 Desplegar la aplicacion
+Luisa Fernanda Sanchez
+21 Registro de justificaciones
+22 Carga de archivos de soporte
+23 Gestión y seguimiento de novedades
+24 hacer pruebas
+25 Generar Documentacion
