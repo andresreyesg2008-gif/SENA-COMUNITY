@@ -6,7 +6,7 @@ Cristhian Andres Montero
 5 Consulta de novedades
 Ronal Santiago Correa Peña
 6 Registro de usuarios.
-7 Inicio de sesión
+7 Registro de inasistencias
 8 Gestión de usuarios
 9 Gestión de Roles
 10 Gestión de fichas
@@ -17,7 +17,7 @@ Andres David Reyes Garcia
 14 Filtrado de información
 15 Actualización de información
 Orledys Paola Garcia Rodriguez
-16 Registro de inasistencias    
+16 Inicio de sesión    
 17 Publicación de comunicados
 18 Consulta de comunicados
 19 Notificaciones
