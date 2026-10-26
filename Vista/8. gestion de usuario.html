@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-fixed": "#cde5ff", "surface-variant": "#e2e2e2", "surface-container-low": "#f3f3f4", "inverse-primary": "#6fdf43", secondary: "#396285", "surface-container-high": "#e8e8e8", "on-tertiary-fixed-variant": "#454747", "tertiary-fixed": "#e2e2e2", "secondary-container": "#add6fe", "tertiary-container": "#929393", "surface-container": "#eeeeee", "on-surface-variant": "#3f4a38", "surface-dim": "#dadada", "tertiary-fixed-dim": "#c6c6c7", "on-secondary-container": "#335d80", "inverse-surface": "#2f3131", "on-surface": "#1a1c1c", outline: "#6f7b66", "on-background": "#1a1c1c", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#1e4a6c", "on-tertiary-container": "#2a2c2c", primary: "#226d00", "on-primary-container": "#0c3400", "surface-container-lowest": "#ffffff", "surface-tint": "#226d00", "on-error-container": "#93000a", "surface-bright": "#f9f9f9", "primary-fixed": "#8afd5d", "on-tertiary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#becbb3", "on-primary-fixed": "#052100", background: "#f9f9f9", error: "#ba1a1a", "on-primary-fixed-variant": "#185200", "primary-fixed-dim": "#6fdf43", "on-secondary": "#ffffff", "secondary-fixed-dim": "#a2cbf3", surface: "#f9f9f9", "on-error": "#ffffff", "primary-container": "#39a900", "surface-container-highest": "#e2e2e2", tertiary: "#5d5f5f", "error-container": "#ffdad6", "on-secondary-fixed": "#001d32"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "1rem", "margin-sm": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-lg": "1.5rem", "gutter-sm": "0.75rem", "space-sm": "0.5rem", "margin-lg": "2rem", gutter: "1rem", "space-xxl": "2rem"}, fontFamily: {"body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "title-lg": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Portal Académico Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W7XncRTv_MWlwveEwRB8C_GcCmX4b3LC-qfHXt4zeWl0roLdwRmpf77dZm2qpiF776vo__bRG8OlJ1nRNfccotIkSC8XN_SNwODsfGwWbrgXepz53c29yM5M9sh6IrZiRLsWAHK3JeBGbn0FHEI3u8fibRkF8MhN32MOsQjCzOKLRMrg0EpkhO5prFV7wDr4_bnERgpbWLj6xX2vYuu3Nurkb1oJV1swwofwF0qJE5Mg"/><div class="flex flex-col min-w-0"><span class="font-title-lg text-title-lg text-primary truncate leading-tight">Portal Académico</span><span class="font-label-sm text-label-sm text-secondary truncate">Usuarios</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button><button aria-label="Perfil de usuario" class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full ring-1 ring-outline-variant hover:ring-secondary transition-all"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk98Erfkp1cw-jicXoC6MjkQIxhu-eHrSsn03Kpbifly75ZRQjOqL3AwbCqKvd3G-QlAWPioGQc3PEJcQUB7HE0WNohzYx_8FgVXBh9ZW6CFkueJJ__wWoOnHCSGyDT87QemumqVRHh1rR2QPqv1yzPaGIid6fnfECS73dHMFD0Doqh_BgbY1yIfcmY8SzUmrD52PH90yn9Khqa1tLEwtgQMm8JerMHjPCwxe_dFpf"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xxl">
+<!-- Search & Filter Controls -->
+<section class="mt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm w-full">
+<div class="flex-1 flex items-center bg-surface-container-lowest rounded-xl shadow-sm px-space-md py-2.5">
+<span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="user-search-input" placeholder="Buscar por nombre, CC o correo..." type="text"/>
+<button class="hidden text-outline hover:text-on-surface text-[18px] ml-1" id="clear-search-btn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<button aria-label="Filtros avanzados" class="h-11 w-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-surface-container-high text-primary hover:bg-surface-variant transition-colors shadow-sm relative" id="toggle-filter-panel">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+</div>
+<!-- Collapsible Advanced Filters Drawer/Panel -->
+<div class="hidden flex-col gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm" id="filter-drawer">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-md text-label-md text-on-surface">Filtros Avanzados</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline" id="reset-filters-btn">Limpiar</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1">Rol</label>
+<select class="h-9 px-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Todos los roles</option>
+<option>Aprendiz ADSO</option>
+<option>Instructor TIC</option>
+<option>Coordinación</option>
+<option>Administrativo</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1">Ficha / Grupo</label>
+<select class="h-9 px-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Todas las fichas</option>
+<option>Ficha 2694120</option>
+<option>Ficha 2718903</option>
+<option>Ficha 2821104</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Metrics Metric Carousel -->
+<section class="mt-space-md overflow-x-auto -mx-margin px-margin flex items-center gap-space-sm pb-1">
+<div class="flex-shrink-0 flex items-center gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total</span>
+<span class="font-title-lg text-title-lg text-on-surface leading-tight">1,420</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aprendices</span>
+<span class="font-title-lg text-title-lg text-on-surface leading-tight">1,250</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">co_present</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instructores</span>
+<span class="font-title-lg text-title-lg text-on-surface leading-tight">110</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Admin</span>
+<span class="font-title-lg text-title-lg text-on-surface leading-tight">60</span>
+</div>
+</div>
+</section>
+<!-- Filter Status Tabs -->
+<section class="mt-space-md flex items-center gap-space-xs overflow-x-auto -mx-margin px-margin pb-1">
+<button class="status-tab flex-shrink-0 px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all" data-status="all">
+      Todos
+    </button>
+<button class="status-tab flex-shrink-0 px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container shadow-sm transition-all" data-status="active">
+      Activos (1,385)
+    </button>
+<button class="status-tab flex-shrink-0 px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container shadow-sm transition-all" data-status="inactive">
+      Inactivos (28)
+    </button>
+<button class="status-tab flex-shrink-0 px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container shadow-sm transition-all" data-status="pending">
+      Pendientes (7)
+    </button>
+</section>
+<!-- Quick Action & List Overview Subheader -->
+<div class="mt-space-lg flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Mostrando 4 de 1,420 usuarios</span>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:underline">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Exportar</span>
+</button>
+</div>
+<!-- User Cards Directory -->
+<div class="mt-space-sm flex flex-col gap-space-md">
+<!-- Card 1: Instructor TIC -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-xl object-cover flex-shrink-0 shadow-sm" data-alt="Retrato profesional de Carlos Mario Restrepo, instructor masculino latinoamericano de unos 40 años con camisa azul marino y gafas, sonriendo cordialmente en un aula de formación técnica tecnológica moderna bien iluminada." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbR8RiWOKrLGwU7mRytEu94jDhkckrjr6e1wV2FnVAuyW0B4CyQ0wmOUG-uO2imNo_g6Dm9dp6wLX04JxeNHzITlLp4sFJ2zzaC7KzQ2VMc8WhsbNE7dc2gTSh-xL0W2hzKVgtDMuEUlTMhUzcz3vxmgovDdiIrFdItkYHdtsFQ6rK8V-I6WqEhF9hOYI5yfsPMDe-52uJM5jumgKQ_0RHi8g9pSzNLri7BRl4Qbl9"/>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-lg text-title-lg text-on-surface truncate">Carlos Mario Restrepo</h2>
+<span class="font-label-sm text-label-sm text-outline">CC 1020489312</span>
+</div>
+</div>
+<!-- Status Badge -->
+<span class="flex-shrink-0 flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Activo
+        </span>
+</div>
+<!-- User Metadata Matrix -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-outline flex-shrink-0">mail</span>
+<span class="truncate">cmrestrepo@portalacademico.edu.co</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-primary font-label-sm text-label-sm">
+            Instructor TIC
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">folder</span>
+            Ficha 2694120
+          </span>
+</div>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="mt-1 pt-2 flex items-center justify-between bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-secondary transition-colors" title="Editar perfil">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Editar</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" title="Historial Asistencia">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+<span>Asistencia</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" title="Restablecer Contraseña">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>Clave</span>
+</button>
+<button aria-label="Más opciones" class="w-8 h-8 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Aprendiz ADSO -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-xl object-cover flex-shrink-0 shadow-sm" data-alt="Fotografía de Mariana Gómez Duque, joven aprendiz mujer latinoamericana de 21 años, expresión atenta y motivada con audífonos al cuello frente a pantalla de laptop de desarrollo de software." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSM9qwRhEwL7FjkUCCP-d86uQ3lTl_X7V_TFWV1E0QQM5NGmNx4XarvG4G5AIRWK5ZU48c__HIsOyJr0aQHnWW6r3FirrFOgBkEh7NyobtTba6BKUpm6U6WCb1sdJbPoOwmcV3OLT5e6IaeHUlMWKC4-8bT7KV8xiGaVxlghi8PJ1fcBPAlp9OYbk-DuuzTD3RUd-5cyNm0lavLlwn4A-IZxvj90jliSuNn1jYaCQo"/>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-lg text-title-lg text-on-surface truncate">Mariana Gómez Duque</h2>
+<span class="font-label-sm text-label-sm text-outline">TI 1032891044</span>
+</div>
+</div>
+<!-- Status Badge -->
+<span class="flex-shrink-0 flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Activo
+        </span>
+</div>
+<!-- User Metadata Matrix -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-outline flex-shrink-0">mail</span>
+<span class="truncate">mgomez.adso@portalacademico.edu.co</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">
+            Aprendiz ADSO
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">folder</span>
+            Ficha 2694120
+          </span>
+</div>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="mt-1 pt-2 flex items-center justify-between bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Editar</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+<span>Asistencia</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>Clave</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Aprendiz Inactivo -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm flex-shrink-0">
+            JA
+          </div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-lg text-title-lg text-on-surface truncate">Julián Andrés Pardo</h2>
+<span class="font-label-sm text-label-sm text-outline">CC 1098471209</span>
+</div>
+</div>
+<!-- Status Badge Inactive -->
+<span class="flex-shrink-0 flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+          Inactivo
+        </span>
+</div>
+<!-- User Metadata Matrix -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-outline flex-shrink-0">mail</span>
+<span class="truncate">jpardo@portalacademico.edu.co</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Aprendiz Redes
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">folder</span>
+            Ficha 2718903
+          </span>
+</div>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="mt-1 pt-2 flex items-center justify-between bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Reactivar</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+<span>Cambiar Rol</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>Clave</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Coordinación Pendiente -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-xl object-cover flex-shrink-0 shadow-sm" data-alt="Retrato de Beatriz Helena Santos, coordinadora académica institucional, mujer de unos 48 años con porte profesional cordial, blazer oscuro y credencial corporativa en oficina institucional iluminada." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5oj_muKNwdxF5pfnyYbx6OMVMjmMoVAnoTgx4Isk4L3QFBgXKMAsQg7SwmxBV7QITI1WhyQVH4gaMPrPXkcG0MnIeFLUV2jvSajjTGFM4dHUUnzg7q0QOJQmr-CaiWz37jAO-2kGS2wc8UqaF1KM2YKNJapwiLGH2ksx_wQK2jfMeSZx70joL17oiX5ZtaFqDnlYRyfFq6sClaZJUU0qnK5xJpwTv6tb_Bl_FlpGM"/>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-lg text-title-lg text-on-surface truncate">Beatriz Helena Santos</h2>
+<span class="font-label-sm text-label-sm text-outline">CC 43892019</span>
+</div>
+</div>
+<!-- Status Badge Pending -->
+<span class="flex-shrink-0 flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          Pendiente
+        </span>
+</div>
+<!-- User Metadata Matrix -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm truncate">
+<span class="material-symbols-outlined text-[16px] text-outline flex-shrink-0">mail</span>
+<span class="truncate">bsantos@portalacademico.edu.co</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+            Coordinación TIC
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">domain</span>
+            Sede Principal
+          </span>
+</div>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="mt-1 pt-2 flex items-center justify-between bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Aprobar</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Editar</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Reenviar Inv.</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Mobile Pagination Indicator & Nav -->
+<section class="mt-space-lg flex items-center justify-between bg-surface-container-lowest rounded-xl p-space-sm shadow-sm">
+<button class="h-9 px-3 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1 opacity-60 cursor-not-allowed">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span>Ant.</span>
+</button>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">1</span>
+<span class="w-7 h-7 rounded-lg hover:bg-surface-container flex items-center justify-center cursor-pointer">2</span>
+<span class="w-7 h-7 rounded-lg hover:bg-surface-container flex items-center justify-center cursor-pointer">3</span>
+<span class="px-1">...</span>
+<span class="w-7 h-7 rounded-lg hover:bg-surface-container flex items-center justify-center cursor-pointer">142</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container-high text-primary hover:bg-surface-variant font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span>Sig.</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</section>
+<!-- Floating Action Button (FAB): + Registrar Usuario -->
+<div class="fixed bottom-20 right-margin z-40">
+<button aria-label="Registrar nuevo usuario" class="h-12 px-4 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg shadow-lg flex items-center gap-2 hover:bg-primary transition-transform active:scale-95" id="register-user-fab">
+<span class="material-symbols-outlined text-[22px]">person_add</span>
+<span>Registrar Usuario</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple interaction for filters toggle
+  const filterToggleBtn = document.getElementById('toggle-filter-panel');
+  const filterDrawer = document.getElementById('filter-drawer');
+  if (filterToggleBtn && filterDrawer) {
+    filterToggleBtn.addEventListener('click', () => {
+      filterDrawer.classList.toggle('hidden');
+      filterDrawer.classList.toggle('flex');
+    });
+  }
+
+  // Clear search input interaction
+  const searchInput = document.getElementById('user-search-input');
+  const clearBtn = document.getElementById('clear-search-btn');
+  if (searchInput && clearBtn) {
+    searchInput.addEventListener('input', (e) => {
+      if (e.target.value.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+    });
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.classList.add('hidden');
+      searchInput.focus();
+    });
+  }
+
+  // Status Tab filtering styling micro-interaction
+  const tabs = document.querySelectorAll('.status-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('bg-primary-container', 'text-on-primary');
+        t.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      tab.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      tab.classList.add('bg-primary-container', 'text-on-primary');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-secondary" data-path="usuarios" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Usuarios</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inasistencias" href="#"><span class="material-symbols-outlined text-[22px]">event_busy</span><span class="font-label-sm text-label-sm mt-0.5">Inasistencias</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="roles" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm mt-0.5">Roles</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="fichas" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm mt-0.5">Fichas</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mas" href="#"><span class="material-symbols-outlined text-[22px]">more_horiz</span><span class="font-label-sm text-label-sm mt-0.5">Más</span></a></div></nav></body></html>

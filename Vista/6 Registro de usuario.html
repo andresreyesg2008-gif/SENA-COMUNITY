@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-fixed": "#cde5ff", "surface-variant": "#e2e2e2", "surface-container-low": "#f3f3f4", "inverse-primary": "#6fdf43", secondary: "#396285", "surface-container-high": "#e8e8e8", "on-tertiary-fixed-variant": "#454747", "tertiary-fixed": "#e2e2e2", "secondary-container": "#add6fe", "tertiary-container": "#929393", "surface-container": "#eeeeee", "on-surface-variant": "#3f4a38", "surface-dim": "#dadada", "tertiary-fixed-dim": "#c6c6c7", "on-secondary-container": "#335d80", "inverse-surface": "#2f3131", "on-surface": "#1a1c1c", outline: "#6f7b66", "on-background": "#1a1c1c", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#1e4a6c", "on-tertiary-container": "#2a2c2c", primary: "#226d00", "on-primary-container": "#0c3400", "surface-container-lowest": "#ffffff", "surface-tint": "#226d00", "on-error-container": "#93000a", "surface-bright": "#f9f9f9", "primary-fixed": "#8afd5d", "on-tertiary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#becbb3", "on-primary-fixed": "#052100", background: "#f9f9f9", error: "#ba1a1a", "on-primary-fixed-variant": "#185200", "primary-fixed-dim": "#6fdf43", "on-secondary": "#ffffff", "secondary-fixed-dim": "#a2cbf3", surface: "#f9f9f9", "on-error": "#ffffff", "primary-container": "#39a900", "surface-container-highest": "#e2e2e2", tertiary: "#5d5f5f", "error-container": "#ffdad6", "on-secondary-fixed": "#001d32"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "1rem", "margin-sm": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-lg": "1.5rem", "gutter-sm": "0.75rem", "space-sm": "0.5rem", "margin-lg": "2rem", gutter: "1rem", "space-xxl": "2rem"}, fontFamily: {"body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "title-lg": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Volver" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Portal Académico Logo" class="h-7 w-auto object-contain flex-shrink-0 hidden xs:block" src="https://lh3.googleusercontent.com/aida/AEtjO1W7XncRTv_MWlwveEwRB8C_GcCmX4b3LC-qfHXt4zeWl0roLdwRmpf77dZm2qpiF776vo__bRG8OlJ1nRNfccotIkSC8XN_SNwODsfGwWbrgXepz53c29yM5M9sh6IrZiRLsWAHK3JeBGbn0FHEI3u8fibRkF8MhN32MOsQjCzOKLRMrg0EpkhO5prFV7wDr4_bnERgpbWLj6xX2vYuu3Nurkb1oJV1swwofwF0qJE5Mg"/><div class="flex flex-col min-w-0"><span class="font-title-lg text-title-lg text-primary truncate leading-tight">Detalle De Usuario</span><span class="font-label-sm text-label-sm text-secondary truncate">Portal Académico</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk98Erfkp1cw-jicXoC6MjkQIxhu-eHrSsn03Kpbifly75ZRQjOqL3AwbCqKvd3G-QlAWPioGQc3PEJcQUB7HE0WNohzYx_8FgVXBh9ZW6CFkueJJ__wWoOnHCSGyDT87QemumqVRHh1rR2QPqv1yzPaGIid6fnfECS73dHMFD0Doqh_BgbY1yIfcmY8SzUmrD52PH90yn9Khqa1tLEwtgQMm8JerMHjPCwxe_dFpf"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Subtle decorative ambient pattern banner -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">how_to_reg</span>
+<span>Paso 1 de 2: Datos y Rol</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">50% completado</span>
+</div>
+<!-- Stepper Indicator Bar -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full w-1/2 transition-all duration-500 ease-out"></div>
+</div>
+<!-- Header copy -->
+<div class="mt-space-sm">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Nuevo Usuario</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 leading-snug">
+        Completa los datos para registrar un aprendiz, instructor o administrativo institucional.
+      </p>
+</div>
+</div>
+<!-- Main Registration Card -->
+<form class="px-margin flex flex-col gap-space-lg mt-space-sm" id="userRegistrationForm" onsubmit="event.preventDefault(); handleSubmit();">
+<!-- Section 1: Identification & Personal Info -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm mb-1">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Identificación Personal</h2>
+</div>
+<!-- Tipo de Documento -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="docType">
+          Tipo de documento <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">assignment_ind</span>
+</div>
+<select class="w-full h-11 pl-10 pr-9 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg appearance-none focus:outline-none focus:bg-surface-container transition-colors" id="docType" required="">
+<option selected="" value="CC">Cédula de Ciudadanía (C.C.)</option>
+<option value="TI">Tarjeta de Identidad (T.I.)</option>
+<option value="CE">Cédula de Extranjería (C.E.)</option>
+<option value="PEP">Permiso Especial de Permanencia</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Número de Documento -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="docNumber">
+          Número de documento <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">pin</span>
+</div>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container transition-colors" id="docNumber" pattern="[0-9]{6,12}" placeholder="Ej. 1023456789" required="" type="tel"/>
+</div>
+</div>
+<!-- Nombres y Apellidos -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="fullName">
+          Nombres y Apellidos completos <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container transition-colors" id="fullName" placeholder="Ej. María Fernanda Gómez Rincón" required="" type="text"/>
+</div>
+</div>
+<!-- Correo Electrónico Institucional -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="instEmail">
+            Correo Institucional <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Dominio oficial</span>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container transition-colors" id="instEmail" placeholder="usuario@instituto.edu.co" required="" type="email"/>
+</div>
+</div>
+<!-- Celular / Contacto -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="phone">
+          Teléfono / Celular de contacto
+        </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">smartphone</span>
+</div>
+<input class="w-full h-11 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container transition-colors" id="phone" placeholder="Ej. 310 987 6543" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Section 2: Role Selection (Interactive Radio Cards) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Asignación de Rol</h2>
+</div>
+<span class="font-label-sm text-label-sm text-error font-medium">* Requerido</span>
+</div>
+<!-- Visual Role Cards Grid -->
+<div class="grid grid-cols-2 gap-space-sm" id="roleContainer">
+<!-- Aprendiz -->
+<label class="relative flex flex-col p-3 rounded-lg cursor-pointer transition-all bg-secondary-container text-on-secondary-container shadow-sm select-none" id="label-role-aprendiz">
+<input checked="" class="sr-only" name="userRole" onchange="handleRoleChange('aprendiz')" type="radio" value="aprendiz"/>
+<div class="flex items-center justify-between w-full mb-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary check-icon">check_circle</span>
+</div>
+<span class="font-title-lg text-title-lg font-semibold leading-tight">Aprendiz</span>
+<span class="font-label-sm text-label-sm opacity-80 mt-0.5">Estudiante regular</span>
+</label>
+<!-- Instructor -->
+<label class="relative flex flex-col p-3 rounded-lg cursor-pointer transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container select-none" id="label-role-instructor">
+<input class="sr-only" name="userRole" onchange="handleRoleChange('instructor')" type="radio" value="instructor"/>
+<div class="flex items-center justify-between w-full mb-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">co_present</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline check-icon">radio_button_unchecked</span>
+</div>
+<span class="font-title-lg text-title-lg font-semibold leading-tight">Instructor</span>
+<span class="font-label-sm text-label-sm opacity-80 mt-0.5">Cuerpo docente</span>
+</label>
+<!-- Coordinador -->
+<label class="relative flex flex-col p-3 rounded-lg cursor-pointer transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container select-none" id="label-role-coordinador">
+<input class="sr-only" name="userRole" onchange="handleRoleChange('coordinador')" type="radio" value="coordinador"/>
+<div class="flex items-center justify-between w-full mb-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline check-icon">radio_button_unchecked</span>
+</div>
+<span class="font-title-lg text-title-lg font-semibold leading-tight">Coordinador</span>
+<span class="font-label-sm text-label-sm opacity-80 mt-0.5">Gestión académica</span>
+</label>
+<!-- Administrador -->
+<label class="relative flex flex-col p-3 rounded-lg cursor-pointer transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container select-none" id="label-role-admin">
+<input class="sr-only" name="userRole" onchange="handleRoleChange('admin')" type="radio" value="admin"/>
+<div class="flex items-center justify-between w-full mb-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline check-icon">radio_button_unchecked</span>
+</div>
+<span class="font-title-lg text-title-lg font-semibold leading-tight">Administrador</span>
+<span class="font-label-sm text-label-sm opacity-80 mt-0.5">Soporte y control</span>
+</label>
+</div>
+<!-- Ficha / Grupo vinculada con buscador interactivo -->
+<div class="flex flex-col gap-1.5 pt-1" id="groupSelectorSection">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="groupSearchInput">
+<span class="flex items-center gap-1">Ficha / Grupo Vinculado <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="selectedBadge">ADSO Mañana</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input autocomplete="off" class="w-full h-11 pl-10 pr-9 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container transition-colors" id="groupSearchInput" onfocus="showGroupDropdown()" oninput="filterGroups(this.value)" placeholder="Buscar código o especialidad..." type="text" value="2670182 - ADSO (Análisis y Desarrollo de Software)"/>
+<button class="absolute inset-y-0 right-0 pr-2.5 flex items-center text-on-surface-variant hover:text-on-surface" onclick="toggleGroupDropdown()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="groupChevron">unfold_more</span>
+</button>
+<!-- Interactive dropdown panel -->
+<div class="hidden absolute left-0 right-0 top-12 z-20 bg-surface-container-lowest rounded-lg shadow-xl max-h-52 overflow-y-auto p-1 flex flex-col gap-1" id="groupOptionsContainer">
+<button class="w-full text-left px-3 py-2 rounded-md hover:bg-surface-container flex flex-col text-on-surface transition-colors" onclick="selectGroup('2670182 - ADSO (Análisis y Desarrollo de Software)', 'ADSO Mañana')" type="button">
+<span class="font-label-lg text-label-lg font-semibold text-primary">2670182 - ADSO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Análisis y Desarrollo de Software • Jornada Mañana</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-md hover:bg-surface-container flex flex-col text-on-surface transition-colors" onclick="selectGroup('2561930 - Redes (Gestión de Redes de Datos)', 'Redes Tarde')" type="button">
+<span class="font-label-lg text-label-lg font-semibold text-primary">2561930 - Redes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gestión de Redes de Datos • Jornada Tarde</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-md hover:bg-surface-container flex flex-col text-on-surface transition-colors" onclick="selectGroup('2718901 - Contabilidad y Finanzas', 'Contabilidad Mixta')" type="button">
+<span class="font-label-lg text-label-lg font-semibold text-primary">2718901 - Contabilidad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tecnólogo en Contabilidad y Finanzas • Mixta</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-md hover:bg-surface-container flex flex-col text-on-surface transition-colors" onclick="selectGroup('2845610 - Mecatrónica Industrial', 'Mecatrónica')" type="button">
+<span class="font-label-lg text-label-lg font-semibold text-primary">2845610 - Mecatrónica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mecatrónica Industrial • Jornada Nocturna</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Status & Legal Policy -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Estado Inicial Toggle -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-on-surface flex items-center gap-1.5">
+            Estado de Cuenta Inicial
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm" id="statusBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Activo
+            </span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Habilita acceso inmediato al portal del aprendiz</span>
+</div>
+<!-- Custom Switch -->
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="userActiveToggle" onchange="handleStatusToggle(this)" type="checkbox"/>
+<div class="w-12 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Habeas Data / Legal Terms -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<div class="pt-0.5">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="legalConsent" required="" type="checkbox"/>
+</div>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none" for="legalConsent">
+          Acepto las políticas institucionales de <strong class="text-on-surface font-semibold">Tratamiento de Datos Personales (Ley 1581 de 2012)</strong> y autorizo la emisión de credenciales digitales automáticas.
+        </label>
+</div>
+</div>
+<!-- Visual Feedback Notification Box (Dynamic) -->
+<div class="hidden p-space-md rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-start gap-space-sm animate-fade-in" id="feedbackBanner">
+<span class="material-symbols-outlined text-[22px] flex-shrink-0 text-secondary">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold">¡Registro Exitoso!</span>
+<span class="font-body-sm text-body-sm">Se han generado las credenciales institucionales y enviado un correo con instrucciones de acceso al usuario.</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-md active:bg-primary-container transition-all" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+<span>Guardar y Enviar Credenciales</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-sm hover:bg-surface-container-high transition-colors" onclick="handleResetForm()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Cancelar / Limpiar Formulario</span>
+</button>
+</div>
+<!-- Institutional Support Footer Note -->
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant py-space-sm text-center">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm">Centro de Formación Tecnológica • Registro Académico Central</span>
+</div>
+</form>
+</div>
+<script>
+  function handleRoleChange(selectedRole) {
+    const roles = ['aprendiz', 'instructor', 'coordinador', 'admin'];
+    roles.forEach(role => {
+      const card = document.getElementById('label-role-' + role);
+      const icon = card.querySelector('.check-icon');
+      if (role === selectedRole) {
+        card.className = "relative flex flex-col p-3 rounded-lg cursor-pointer transition-all bg-secondary-container text-on-secondary-container shadow-sm select-none";
+        icon.innerText = "check_circle";
+        icon.className = "material-symbols-outlined text-[20px] text-secondary check-icon";
+      } else {
+        card.className = "relative flex flex-col p-3 rounded-lg cursor-pointer transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container select-none";
+        icon.innerText = "radio_button_unchecked";
+        icon.className = "material-symbols-outlined text-[20px] text-outline check-icon";
+      }
+    });
+
+    // Dynamic adaptation for role
+    const groupSection = document.getElementById('groupSelectorSection');
+    if (selectedRole === 'admin') {
+      groupSection.classList.add('opacity-40');
+      document.getElementById('groupSearchInput').disabled = true;
+    } else {
+      groupSection.classList.remove('opacity-40');
+      document.getElementById('groupSearchInput').disabled = false;
+    }
+  }
+
+  function handleStatusToggle(checkbox) {
+    const badge = document.getElementById('statusBadge');
+    if (checkbox.checked) {
+      badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Activo';
+      badge.className = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm";
+    } else {
+      badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Inactivo';
+      badge.className = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm";
+    }
+  }
+
+  function toggleGroupDropdown() {
+    const list = document.getElementById('groupOptionsContainer');
+    list.classList.toggle('hidden');
+  }
+
+  function showGroupDropdown() {
+    const list = document.getElementById('groupOptionsContainer');
+    list.classList.remove('hidden');
+  }
+
+  function selectGroup(groupFullName, badgeLabel) {
+    document.getElementById('groupSearchInput').value = groupFullName;
+    document.getElementById('selectedBadge').innerText = badgeLabel;
+    document.getElementById('groupOptionsContainer').classList.add('hidden');
+  }
+
+  function filterGroups(query) {
+    const list = document.getElementById('groupOptionsContainer');
+    list.classList.remove('hidden');
+    const buttons = list.querySelectorAll('button');
+    const lowerQuery = query.toLowerCase();
+    buttons.forEach(btn => {
+      if (btn.innerText.toLowerCase().includes(lowerQuery)) {
+        btn.classList.remove('hidden');
+      } else {
+        btn.classList.add('hidden');
+      }
+    });
+  }
+
+  function handleResetForm() {
+    document.getElementById('userRegistrationForm').reset();
+    handleRoleChange('aprendiz');
+    document.getElementById('selectedBadge').innerText = 'Sin asignar';
+    document.getElementById('feedbackBanner').classList.add('hidden');
+  }
+
+  function handleSubmit() {
+    const consent = document.getElementById('legalConsent');
+    if (!consent.checked) {
+      alert('Por favor acepte la autorización de tratamiento de datos personales para continuar.');
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.classList.add('opacity-75');
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span> Procesando alta institucional...';
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.classList.remove('opacity-75');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">mark_email_read</span> Guardar y Enviar Credenciales';
+      
+      const feedback = document.getElementById('feedbackBanner');
+      feedback.classList.remove('hidden');
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 900);
+  }
+
+  // Dismiss dropdown on clicks outside
+  document.addEventListener('click', (e) => {
+    const groupInput = document.getElementById('groupSearchInput');
+    const groupContainer = document.getElementById('groupOptionsContainer');
+    const chevronBtn = document.getElementById('groupChevron');
+    if (groupInput && groupContainer && !groupInput.contains(e.target) && !groupContainer.contains(e.target) && !chevronBtn.contains(e.target)) {
+      groupContainer.classList.add('hidden');
+    }
+  });
+</script></main></body></html>

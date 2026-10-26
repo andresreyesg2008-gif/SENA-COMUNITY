@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"secondary-fixed": "#cde5ff", "surface-variant": "#e2e2e2", "surface-container-low": "#f3f3f4", "inverse-primary": "#6fdf43", secondary: "#396285", "surface-container-high": "#e8e8e8", "on-tertiary-fixed-variant": "#454747", "tertiary-fixed": "#e2e2e2", "secondary-container": "#add6fe", "tertiary-container": "#929393", "surface-container": "#eeeeee", "on-surface-variant": "#3f4a38", "surface-dim": "#dadada", "tertiary-fixed-dim": "#c6c6c7", "on-secondary-container": "#335d80", "inverse-surface": "#2f3131", "on-surface": "#1a1c1c", outline: "#6f7b66", "on-background": "#1a1c1c", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#1e4a6c", "on-tertiary-container": "#2a2c2c", primary: "#226d00", "on-primary-container": "#0c3400", "surface-container-lowest": "#ffffff", "surface-tint": "#226d00", "on-error-container": "#93000a", "surface-bright": "#f9f9f9", "primary-fixed": "#8afd5d", "on-tertiary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#becbb3", "on-primary-fixed": "#052100", background: "#f9f9f9", error: "#ba1a1a", "on-primary-fixed-variant": "#185200", "primary-fixed-dim": "#6fdf43", "on-secondary": "#ffffff", "secondary-fixed-dim": "#a2cbf3", surface: "#f9f9f9", "on-error": "#ffffff", "primary-container": "#39a900", "surface-container-highest": "#e2e2e2", tertiary: "#5d5f5f", "error-container": "#ffdad6", "on-secondary-fixed": "#001d32"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {margin: "1rem", "margin-sm": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-lg": "1.5rem", "gutter-sm": "0.75rem", "space-sm": "0.5rem", "margin-lg": "2rem", gutter: "1rem", "space-xxl": "2rem"}, fontFamily: {"body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}], "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-md": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg": ["24px", {lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "title-lg": ["16px", {lineHeight: "24px", fontWeight: "600"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Portal Académico Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W7XncRTv_MWlwveEwRB8C_GcCmX4b3LC-qfHXt4zeWl0roLdwRmpf77dZm2qpiF776vo__bRG8OlJ1nRNfccotIkSC8XN_SNwODsfGwWbrgXepz53c29yM5M9sh6IrZiRLsWAHK3JeBGbn0FHEI3u8fibRkF8MhN32MOsQjCzOKLRMrg0EpkhO5prFV7wDr4_bnERgpbWLj6xX2vYuu3Nurkb1oJV1swwofwF0qJE5Mg"/><div class="flex flex-col min-w-0"><span class="font-title-lg text-title-lg text-primary truncate leading-tight">Portal Académico</span><span class="font-label-sm text-label-sm text-secondary truncate">Roles</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button><button aria-label="Perfil de usuario" class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full ring-1 ring-outline-variant hover:ring-secondary transition-all"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk98Erfkp1cw-jicXoC6MjkQIxhu-eHrSsn03Kpbifly75ZRQjOqL3AwbCqKvd3G-QlAWPioGQc3PEJcQUB7HE0WNohzYx_8FgVXBh9ZW6CFkueJJ__wWoOnHCSGyDT87QemumqVRHh1rR2QPqv1yzPaGIid6fnfECS73dHMFD0Doqh_BgbY1yIfcmY8SzUmrD52PH90yn9Khqa1tLEwtgQMm8JerMHjPCwxe_dFpf"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-lg pb-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-xl bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Seguridad y Gobernanza</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Roles y Permisos Institucionales</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Configura los niveles de acceso y responsabilidades en la plataforma.
+    </p>
+</div>
+<div class="px-margin pb-space-lg flex items-center justify-between gap-space-sm">
+<button class="w-full flex items-center justify-center gap-space-xs h-11 px-space-lg bg-primary text-on-primary rounded-xl font-label-lg text-label-lg shadow-sm active:scale-[0.98] transition-transform" id="btn-create-role">
+<span class="material-symbols-outlined text-[20px]">add_moderator</span>
+<span>+ Crear Nuevo Rol</span>
+</button>
+</div>
+<div class="px-margin pb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-xl bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">shield_person</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total perfiles activos</span>
+<span class="font-title-lg text-title-lg text-primary">5 Roles Definidos</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Usuarios cubiertos</span>
+<span class="font-title-lg text-title-lg text-secondary block">1,374 asignados</span>
+</div>
+</div>
+</div>
+<div class="px-margin pb-space-xxl flex flex-col gap-space-md">
+<!-- Rol 1: Administrador General -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" data-role-id="admin">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">admin_panel_settings</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary">Administrador General</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Sistema completo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span> 4 usuarios
+              </span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold">
+          Acceso Total
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Usuarios</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Fichas</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Inasistencias</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Configuración</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Auditoría</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Nivel de privilegios</span>
+<span class="text-secondary font-semibold">18 de 18 permisos</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary font-medium">Activo</span>
+</div>
+<button class="open-matrix-btn flex items-center gap-1.5 h-9 px-space-md rounded-xl bg-surface-container text-primary font-label-md text-label-md active:bg-surface-container-high transition-colors" data-preset="admin" data-role-title="Administrador General">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Editar Permisos</span>
+</button>
+</div>
+</div>
+<!-- Rol 2: Coordinador Académico -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" data-role-id="coord">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">manage_accounts</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary">Coordinador Académico</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Gestión zonal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span> 12 usuarios
+              </span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant">
+          Supervisión
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Gestión de Fichas</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Aprobación de Justificaciones</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Reportes generales</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Nivel de privilegios</span>
+<span class="text-secondary font-semibold">14 de 18 permisos</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 77%;"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary font-medium">Activo</span>
+</div>
+<button class="open-matrix-btn flex items-center gap-1.5 h-9 px-space-md rounded-xl bg-surface-container text-primary font-label-md text-label-md active:bg-surface-container-high transition-colors" data-preset="coord" data-role-title="Coordinador Académico">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Editar Permisos</span>
+</button>
+</div>
+</div>
+<!-- Rol 3: Instructor / Docente -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" data-role-id="instructor">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary">Instructor / Docente</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Académico</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span> 110 usuarios
+              </span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface">
+          Operativo
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Toma de Asistencia</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Reporte de Inasistencias</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Calificaciones</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Consulta de Ficha</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Nivel de privilegios</span>
+<span class="text-secondary font-semibold">10 de 18 permisos</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary font-medium">Activo</span>
+</div>
+<button class="open-matrix-btn flex items-center gap-1.5 h-9 px-space-md rounded-xl bg-surface-container text-primary font-label-md text-label-md active:bg-surface-container-high transition-colors" data-preset="instructor" data-role-title="Instructor / Docente">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Editar Permisos</span>
+</button>
+</div>
+</div>
+<!-- Rol 4: Aprendiz / Estudiante -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" data-role-id="student">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">local_library</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary">Aprendiz / Estudiante</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Consulta</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span> 1,250 usuarios
+              </span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">
+          Estudiantil
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Consulta de Horario</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Radicación Justificaciones</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Estado de Ficha</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Nivel de privilegios</span>
+<span class="text-secondary font-semibold">4 de 18 permisos</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 22%;"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary font-medium">Activo</span>
+</div>
+<button class="open-matrix-btn flex items-center gap-1.5 h-9 px-space-md rounded-xl bg-surface-container text-primary font-label-md text-label-md active:bg-surface-container-high transition-colors" data-preset="student" data-role-title="Aprendiz / Estudiante">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Editar Permisos</span>
+</button>
+</div>
+</div>
+<!-- Rol 5: Apoyo de Bienestar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" data-role-id="wellbeing">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary">Apoyo de Bienestar</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface">Soporte</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">person</span> 8 usuarios
+              </span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">
+          Seguimiento
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Monitoreo alertas deserción</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">Historial inasistencias</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Nivel de privilegios</span>
+<span class="text-secondary font-semibold">6 de 18 permisos</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 33%;"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-secondary font-medium">Activo</span>
+</div>
+<button class="open-matrix-btn flex items-center gap-1.5 h-9 px-space-md rounded-xl bg-surface-container text-primary font-label-md text-label-md active:bg-surface-container-high transition-colors" data-preset="wellbeing" data-role-title="Apoyo de Bienestar">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Editar Permisos</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Panel Modal Matriz de Permisos -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden flex-col justify-end" id="permission-matrix-modal">
+<div class="w-full max-h-[777px] bg-surface-container-lowest rounded-t-2xl shadow-xl flex flex-col overflow-hidden">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Matriz de Privilegios</span>
+<h2 class="font-headline-sm text-headline-sm text-primary truncate" id="modal-role-title">Configurar Rol</h2>
+</div>
+<button aria-label="Cerrar" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-95 transition-transform" id="close-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body Matriz -->
+<div class="p-space-lg overflow-y-auto flex flex-col gap-space-lg">
+<div class="flex items-center justify-between p-space-sm bg-surface-container rounded-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">toggle_on</span>
+<span class="font-label-md text-label-md text-primary">Estado operacional del rol</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Activo</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-title-lg text-title-lg text-primary">Módulos y Acciones</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Selecciona las capacidades concedidas para cada entidad del sistema:</p>
+<!-- Modulo: Asistencias e Inasistencias -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">event_available</span>
+                Inasistencias y Asistencias
+              </span>
+</div>
+<div class="grid grid-cols-4 gap-2 pt-1">
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Ver</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Crear</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Editar</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Eliminar</span>
+</label>
+</div>
+</div>
+<!-- Modulo: Fichas y Grupos -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">folder_shared</span>
+                Gestión de Fichas
+              </span>
+</div>
+<div class="grid grid-cols-4 gap-2 pt-1">
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Ver</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Crear</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Editar</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Eliminar</span>
+</label>
+</div>
+</div>
+<!-- Modulo: Justificaciones de Inasistencia -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">task</span>
+                Justificaciones
+              </span>
+</div>
+<div class="grid grid-cols-4 gap-2 pt-1">
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Ver</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Crear</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Editar</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Eliminar</span>
+</label>
+</div>
+</div>
+<!-- Modulo: Configuración y Auditoría -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">security</span>
+                Configuración y Logs
+              </span>
+</div>
+<div class="grid grid-cols-4 gap-2 pt-1">
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Ver</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Crear</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Editar</span>
+</label>
+<label class="flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-lowest text-center cursor-pointer">
+<input class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Eliminar</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-lowest flex items-center gap-space-sm shadow-[0_-2px_10px_rgba(0,0,0,0.04)]">
+<button class="flex-1 h-11 rounded-xl bg-surface-container text-primary font-label-lg text-label-lg active:bg-surface-container-high transition-colors" id="cancel-modal-btn">
+          Cancelar
+        </button>
+<button class="flex-1 h-11 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg active:scale-[0.98] transition-transform" id="save-modal-btn">
+          Guardar Cambios
+        </button>
+</div>
+</div>
+</div>
+<div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-sm p-space-md rounded-xl bg-primary text-on-primary shadow-lg" id="toast-notification">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-message">Permisos actualizados correctamente.</span>
+</div>
+</div>
+<script>
+  (function() {
+    const modal = document.getElementById('permission-matrix-modal');
+    const modalTitle = document.getElementById('modal-role-title');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const cancelModalBtn = document.getElementById('cancel-modal-btn');
+    const saveModalBtn = document.getElementById('save-modal-btn');
+    const createBtn = document.getElementById('btn-create-role');
+    const toast = document.getElementById('toast-notification');
+    const toastMsg = document.getElementById('toast-message');
+
+    function showToast(msg) {
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('-translate-y-12', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('-translate-y-12', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+
+    function openModal(title) {
+      if (!modal) return;
+      modalTitle.textContent = title;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.querySelectorAll('.open-matrix-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const title = btn.getAttribute('data-role-title') || 'Rol Seleccionado';
+        openModal(title);
+      });
+    });
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+    if (saveModalBtn) {
+      saveModalBtn.addEventListener('click', () => {
+        closeModal();
+        showToast('Permisos guardados con éxito.');
+      });
+    }
+
+    if (createBtn) {
+      createBtn.addEventListener('click', () => {
+        openModal('Nuevo Rol Institucional');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="usuarios" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Usuarios</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inasistencias" href="#"><span class="material-symbols-outlined text-[22px]">event_busy</span><span class="font-label-sm text-label-sm mt-0.5">Inasistencias</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-secondary" data-path="roles" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm mt-0.5">Roles</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="fichas" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm mt-0.5">Fichas</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mas" href="#"><span class="material-symbols-outlined text-[22px]">more_horiz</span><span class="font-label-sm text-label-sm mt-0.5">Más</span></a></div></nav></body></html>
