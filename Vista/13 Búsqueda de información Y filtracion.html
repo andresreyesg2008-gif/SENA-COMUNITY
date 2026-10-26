@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#1978e5",
+        "primary-container": "#1978e5",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#ffffff",
+        "primary-fixed": "#d8e6ff",
+        "primary-fixed-dim": "#a8c8ff",
+        "on-primary-fixed": "#001d36",
+        "on-primary-fixed-variant": "#004785",
+        "secondary": "#1978e5",
+        "secondary-container": "#e0edff",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#004785",
+        "secondary-fixed": "#d8e6ff",
+        "secondary-fixed-dim": "#a8c8ff",
+        "on-secondary-fixed": "#001d36",
+        "on-secondary-fixed-variant": "#004785",
+        "tertiary": "#396285",
+        "tertiary-container": "#d0e4ff",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-container": "#001d36",
+        "tertiary-fixed": "#d0e4ff",
+        "tertiary-fixed-dim": "#9ccaff",
+        "on-tertiary-fixed": "#001d36",
+        "on-tertiary-fixed-variant": "#204a6c",
+        "surface": "#f9f9f9",
+        "surface-dim": "#dadada",
+        "surface-bright": "#f9f9f9",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f3f4",
+        "surface-container": "#eeeeee",
+        "surface-container-high": "#e8e8e8",
+        "surface-container-highest": "#e2e2e2",
+        "on-surface": "#1a1c1c",
+        "on-surface-variant": "#414753",
+        "outline": "#717785",
+        "outline-variant": "#c1c6d5",
+        "inverse-surface": "#2f3131",
+        "inverse-on-surface": "#f0f1f1",
+        "inverse-primary": "#a8c8ff",
+        "background": "#f9f9f9",
+        "on-background": "#1a1c1c",
+        "error": "#ba1a1a",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "on-error-container": "#93000a",
+        "success": "#16a34a",
+        "success-container": "#dcfce7",
+        "on-success": "#ffffff"
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-xs": "0.25rem",
+        "gutter": "1rem",
+        "margin-mobile": "1rem",
+        "space-md": "1rem",
+        "gutter-mobile": "0.75rem",
+        "space-sm": "0.5rem",
+        "margin": "1.25rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2rem"
+      },
+      fontFamily: {
+        "headline-lg": ["Inter", "sans-serif"],
+        "body-lg": ["Inter", "sans-serif"],
+        "badge-indicator": ["Inter", "sans-serif"],
+        "headline-sm": ["Inter", "sans-serif"],
+        "label-lg": ["Inter", "sans-serif"],
+        "display-lg": ["Inter", "sans-serif"],
+        "display-lg-mobile": ["Inter", "sans-serif"],
+        "body-md": ["Inter", "sans-serif"],
+        "label-sm": ["Inter", "sans-serif"],
+        "label-md": ["Inter", "sans-serif"],
+        "body-sm": ["Inter", "sans-serif"],
+        "headline-md": ["Inter", "sans-serif"]
+      },
+      fontSize: {
+        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "badge-indicator": ["10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+        "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "display-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+      }
+    }
+  }
+};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Vocería &amp; Integrantes Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1X7UELi0qnNrOdss7q7Dayi2NlUww4L5-obLroGCeHv7lwd7ab1E7ejWtIMM31Vj8cNWdZNp-Cy0UHoM4So0k9a0wL-sXLmTUIrKtOnf86Pfv9Zt5NvQifHxGFdCjPbNv3j5tGh4BoQzgFVysoswYhXnZPnW_dWkX41SGAAca7HVCu2CKzdq0xlTJA5eS5i6zm5n7TmpBcfkOMfs-wq8b2YTNSOyjBvXsTkoprFQ3qu"><div class="flex flex-col min-w-0"><span class="text-label-sm font-label-sm text-primary uppercase tracking-wider leading-none" style="color: rgb(34, 109, 0);">SGI Vocería</span><span class="text-headline-sm font-headline-sm text-on-surface truncate">Directorio</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 transition-colors"><span class="material-symbols-outlined">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-space-xs ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASOP9het89v__b9TfH4fTFIO50LwptS_WXeQEm2slSMR1cmHlgUSEZJ-z-3ieG5W3-iR_GzNAqHoZXLqXrfmFj6UZk6pxtOk0KgW3V_UDs2kQRlEpxeEYE3WZft13emB4V4CqxvkYmR1kGHavN7-bf_0dG_vN3NuFgb5acZHzPmGKN8CH35OCZQ_Y2fOgi3afcGHuUBuaKHGONUw3pPrVFQDVPCE8WOxCZkI9fc1s"></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-mobile pt-space-sm pb-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest rounded-xl p-space-xs shadow-sm border border-outline-variant/40 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition-all">
+<div class="w-10 h-10 flex items-center justify-center text-primary flex-shrink-0" style="color: rgb(57, 169, 0);">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</div>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none pr-space-xs" id="directory-search" placeholder="Buscar por nombre, cédula o comisión..." type="text">
+<button aria-label="Abrir panel de filtros" class="relative w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-low text-primary hover:bg-secondary-container transition-colors active:scale-95 flex-shrink-0" id="btn-toggle-filters" style="color: rgb(34, 109, 0); background-color: rgb(173, 214, 254);">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin-mobile px-margin-mobile">
+<button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-primary text-on-primary shadow-sm flex-shrink-0 active:scale-95 transition-all" data-filter="all" style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
+<span class="">Todos</span>
+<span class="bg-white/20 px-1.5 py-0.5 rounded-full text-badge-indicator font-badge-indicator text-on-primary">142</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface border border-outline-variant/30 shadow-sm flex-shrink-0 active:scale-95 transition-all" data-filter="voceros">
+<span class="w-2 h-2 rounded-full bg-primary" style="background-color: rgb(57, 169, 0);"></span>
+<span class="">Voceros Habilitados</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded-full text-badge-indicator font-badge-indicator text-on-surface" style="background-color: rgb(57, 169, 0);">28</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface border border-outline-variant/30 shadow-sm flex-shrink-0 active:scale-95 transition-all" data-filter="directiva">
+<span class="">Mesa Directiva</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded-full text-badge-indicator font-badge-indicator text-on-surface">12</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface border border-outline-variant/30 shadow-sm flex-shrink-0 active:scale-95 transition-all" data-filter="legal">
+<span class="">Comisión Legal</span>
+</button>
+<button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface-variant hover:text-on-surface border border-outline-variant/30 shadow-sm flex-shrink-0 active:scale-95 transition-all" data-filter="proceso">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+<span class="">En Proceso</span>
+</button>
+</div>
+</div>
+<div class="hidden px-margin-mobile mb-space-xs transition-all duration-300" id="filter-sheet">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm border border-outline-variant/30 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">filter_alt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Filtros Institucionales</span>
+</div>
+<button class="text-label-sm font-label-sm text-primary hover:underline font-semibold" id="btn-reset-filters">Limpiar</button>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Zona / Región</label>
+<div class="relative bg-surface-container-lowest rounded-lg px-2.5 py-2 shadow-sm border border-outline-variant/30 flex items-center justify-between">
+<span class="text-body-sm font-body-sm text-on-surface">Nacional / Todas</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Estatus</label>
+<div class="relative bg-surface-container-lowest rounded-lg px-2.5 py-2 shadow-sm border border-outline-variant/30 flex items-center justify-between">
+<span class="text-body-sm font-body-sm text-on-surface">Activos</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="text-label-sm font-label-sm text-outline mr-1">Aplicados:</span>
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full text-badge-indicator font-badge-indicator">
+          Región: Centro
+          <span class="material-symbols-outlined text-[12px] cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full text-badge-indicator font-badge-indicator">
+          Acreditación: 2024
+          <span class="material-symbols-outlined text-[12px] cursor-pointer">close</span>
+</span>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Mostrando <strong class="text-on-surface font-headline-sm">28</strong> registros filtrados</span>
+</div>
+<button class="flex items-center gap-1 text-label-sm font-label-sm text-primary hover:text-primary/80 transition-colors py-1 font-medium" id="toggle-filter-btn-secondary">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span class="">Filtros avanzados</span>
+</button>
+</div>
+<div class="px-margin-mobile flex flex-col gap-space-sm pb-space-lg" id="members-list">
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/30 flex flex-col gap-space-sm active:scale-[0.99] transition-transform">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-primary/20" data-alt="Close-up professional portrait of a confident Hispanic female executive with hair pulled back wearing an elegant dark navy blazer in an official setting with warm natural side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2pZQvo68F85h0s_KeeK8Syc3conuETXki4Z7qrMJtKbtDIe2qXSM2itjw3zGmVppYmuARgjMy2lqUSOiYH97zSHlcPcRXAA6nJntQ3q7BHbtiU6Ivt83piT7F45DQzuRHZvzsA_-wj4bFPkC6lj0Huoe6PB-iQq0geNY3IPm32B_3-D8ahA9kNGP65OE0YEny5SoO5HxwBpkwC1GTGj--rwJUEGKAa_3vUYc5gw">
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Dra. Mariana Rivas</h2>
+<span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ID: SGI-7734 • Comisión Central</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container px-2.5 py-1 rounded-full text-badge-indicator font-badge-indicator flex-shrink-0" style="background-color: rgb(138, 253, 93); color: rgb(12, 52, 0);">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          VOCERO OFICIAL
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1 border border-outline-variant/20">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+<span class="text-label-sm font-label-sm text-on-surface font-medium">Especialidad Temática:</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Asuntos Regulatorios, Salud Pública e Integridad</p>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-badge-indicator font-badge-indicator text-on-surface-variant">
+            Nivel: Titular
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-badge-indicator font-badge-indicator text-primary font-semibold">
+            Vigente 2024
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Llamar o contactar" class="w-8 h-8 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-primary flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]">call</span>
+</button>
+<button aria-label="Enviar correo institucional" class="w-8 h-8 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-primary flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]">mail</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary text-label-sm font-label-sm flex items-center gap-1 shadow-sm hover:bg-primary/90 active:scale-95 transition-all" style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
+<span class="">Ficha</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-primary/20" data-alt="Professional studio portrait of an experienced male corporate officer with short salt-and-pepper hair, glasses, wearing a structured charcoal gray suit against a clean architectural studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzQLrU4xWteBXzP6IASvs-iAFoVcRgIHDWk7M0hqnIpW7G2XiGC31zJJGWGPKSUS_ttnx-NoWgLA7Qv0YSCfIeXMyhZpGRk_RUVJtZtxqmTdi1iNC3XLj_n79V9jRfd4oqDiIIcfWSjGUWKzOdQWBnXpVhURKjzeKS5GT-qRVysODvVs4luxcp4U1H4Mr539jHkFIRJi8cjcLNhnVa9cpcrVztTSD2ybrcqoKVxc8">
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Lic. Carlos Méndez</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ID: SGI-4109 • Comisión Medios</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container px-2 py-1 rounded-full text-badge-indicator font-badge-indicator text-on-surface-variant flex-shrink-0">
+          INTEGRANTE ACTIVO
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between border border-outline-variant/20">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface font-medium">Comunicación y Medios</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Secretaría Técnica Permanente</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-semibold bg-secondary-container px-2 py-1 rounded-md">9 intervenciones</span>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-badge-indicator font-badge-indicator text-on-surface-variant">
+            Zona Centro
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Enviar correo institucional" class="w-8 h-8 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-primary flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]">mail</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-highest text-on-surface hover:bg-secondary-container hover:text-primary text-label-sm font-label-sm flex items-center gap-1 active:scale-95 transition-all">
+<span class="">Ficha</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-primary/20" data-alt="Editorial portrait of a sharp young professional woman in a crisp white shirt with dark modern blazer, standing proudly in an institutional conference hall with soft ambient daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwshMAejO58e0DokwqcunOUUkHWvQxt0Nb0h6lfyT9Uk90tLeVoLzqtCR1MhsQDCLIooA7sDuA6aBDCi1xOKoq7dcO5-ziFfUGGaWc0vzesv0zH5Cih4b-UCulay2l-23VEYHdx51Yx9vF8fk-Ax5Gl3RlyKnRK_IRrG7etMh1tajgM4b4r6N5Pj_CLfG-6hzRLKSk2yPoeW3XJyjE0MDmSa1X0kC4UVcAnBXZQQs">
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Ing. Sofía Valenzuela</h2>
+<span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ID: SGI-9921 • Nodo Regional Norte</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 bg-secondary-container px-2.5 py-1 rounded-full text-badge-indicator font-badge-indicator text-primary flex-shrink-0">
+          VOCERO REGIONAL
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1 border border-outline-variant/20">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">energy_savings_leaf</span>
+<span class="text-label-sm font-label-sm text-on-surface font-medium">Especialidad Temática:</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">Medio Ambiente, Sostenibilidad e Infraestructura Hídrica</p>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-badge-indicator font-badge-indicator text-on-surface-variant">
+            Zona Norte
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-badge-indicator font-badge-indicator text-primary font-semibold">
+            Acreditada
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Llamar o contactar" class="w-8 h-8 rounded-full bg-surface-container hover:bg-secondary-container text-on-surface-variant hover:text-primary flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]">call</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-primary text-on-primary text-label-sm font-label-sm flex items-center gap-1 shadow-sm hover:bg-primary/90 active:scale-95 transition-all" style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
+<span class="">Ficha</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-outline-variant/40" data-alt="Professional warm headshot portrait of a mature senior male academic and economist wearing a navy blazer and blue shirt with confident mild smile in a high-level boardroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE8ZFYe8yokwo4yt4qURAIrw2P7xU8FV-hmP5rx0ri7xspQvY8WDEIBApCA-_agNfZOs2nBRyehBddZbRzhTRXGGhq1wQhSv7heQ9CAhL73kW3-YzIDzKkTrOBKeFvjtw3n4XAVatkwgvwayDsiD2XmON6pxVPP5AICx9j3px552QUlF2wqernGGh4A4mrakDCmZzq6IC68q6-4qKvN-zDQmZU3H6o_gV1EjTzZuE">
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Mtro. Roberto Alarcón</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ID: SGI-1182 • Comisión Finanzas</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full text-badge-indicator font-badge-indicator text-on-surface-variant flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>
+          EN ACREDITACIÓN
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between border border-outline-variant/20">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface font-medium">Finanzas y Presupuesto</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Revisión de Credenciales en Curso</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded-md">Paso 2 / 3</span>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-badge-indicator font-badge-indicator text-on-surface-variant">
+            Zona Sur
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-badge-indicator font-badge-indicator text-on-surface-variant">
+            Auditoría
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-highest hover:bg-secondary-container hover:text-primary text-on-surface text-label-sm font-label-sm flex items-center gap-1 active:scale-95 transition-all">
+<span class="">Revisar</span>
+<span class="material-symbols-outlined text-[14px]">rule</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<div class="sticky bottom-20 px-margin-mobile flex items-center justify-between pointer-events-none mt-auto">
+<div class="pointer-events-auto shadow-md rounded-full bg-surface-container-lowest p-1 flex items-center gap-1 border border-outline-variant/30">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-full bg-surface-container-low text-on-surface text-label-sm font-label-sm hover:bg-secondary-container hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[18px] text-primary">file_download</span>
+<span class="">Exportar Roster</span>
+</button>
+</div>
+<div class="pointer-events-auto">
+<button class="flex items-center gap-1.5 px-4 py-3 rounded-full bg-primary text-on-primary shadow-lg hover:shadow-xl hover:bg-primary/90 active:scale-95 transition-all" style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span class="text-label-md font-label-md">Nuevo Integrante</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const filterBtn = document.getElementById('btn-toggle-filters');
+    const filterBtnAlt = document.getElementById('toggle-filter-btn-secondary');
+    const filterSheet = document.getElementById('filter-sheet');
+    const resetBtn = document.getElementById('btn-reset-filters');
+    const searchInput = document.getElementById('directory-search');
+    const chips = document.querySelectorAll('.filter-chip');
+
+    function toggleSheet() {
+      if (filterSheet) {
+        filterSheet.classList.toggle('hidden');
+      }
+    }
+
+    if (filterBtn) filterBtn.addEventListener('click', toggleSheet);
+    if (filterBtnAlt) filterBtnAlt.addEventListener('click', toggleSheet);
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        chips.forEach((c, idx) => {
+          if (idx === 0) {
+            c.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+            c.classList.add('bg-primary', 'text-on-primary');
+          } else {
+            c.classList.remove('bg-primary', 'text-on-primary');
+            c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+          }
+        });
+      });
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        chip.classList.add('bg-primary', 'text-on-primary');
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const articles = document.querySelectorAll('#members-list article');
+        articles.forEach(article => {
+          const text = article.textContent.toLowerCase();
+          if (text.includes(query)) {
+            article.style.display = 'flex';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-surface-container-high/60 shadow-[0_-4px_16px_rgba(25,120,229,0.06)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-primary font-label-md" data-path="directorio" href="#" style="color: rgb(34, 109, 0);"><span class="material-symbols-outlined text-[24px]">badge</span><span class="text-label-sm font-label-sm mt-0.5">Directorio</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="registro" href="#"><span class="material-symbols-outlined text-[24px]">person_add</span><span class="text-label-sm font-label-sm mt-0.5">Registro</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="voceros" href="#"><span class="material-symbols-outlined text-[24px]">campaign</span><span class="text-label-sm font-label-sm mt-0.5">Voceros</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="mi-perfil" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="text-label-sm font-label-sm mt-0.5">Mi Perfil</span></a></div></nav>
+
+</body></html>

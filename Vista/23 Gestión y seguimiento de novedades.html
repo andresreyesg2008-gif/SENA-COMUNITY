@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "inverse-primary": "#6fdf43",
+        "on-primary": "#ffffff",
+        "surface-dim": "#dadada",
+        "on-error": "#ffffff",
+        "on-surface-variant": "#3f4a38",
+        "on-secondary": "#ffffff",
+        "outline": "#6f7b66",
+        "tertiary-container": "#929393",
+        "outline-variant": "#becbb3",
+        "primary": "#226d00",
+        "surface-tint": "#226d00",
+        "surface-container-high": "#e8e8e8",
+        "on-tertiary-fixed-variant": "#454747",
+        "surface-container": "#eeeeee",
+        "surface-container-highest": "#e2e2e2",
+        "secondary": "#396285",
+        "error-container": "#ffdad6",
+        "secondary-container": "#add6fe",
+        "tertiary-fixed": "#e2e2e2",
+        "tertiary-fixed-dim": "#c6c6c7",
+        "background": "#f9f9f9",
+        "on-secondary-container": "#335d80",
+        "inverse-on-surface": "#f0f1f1",
+        "on-tertiary-fixed": "#1a1c1c",
+        "on-secondary-fixed-variant": "#1e4a6c",
+        "on-secondary-fixed": "#001d32",
+        "on-error-container": "#93000a",
+        "on-background": "#1a1c1c",
+        "surface-container-lowest": "#ffffff",
+        "surface": "#f9f9f9",
+        "primary-fixed-dim": "#6fdf43",
+        "on-surface": "#1a1c1c",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-container": "#2a2c2c",
+        "inverse-surface": "#2f3131",
+        "primary-container": "#39a900",
+        "surface-variant": "#e2e2e2",
+        "surface-container-low": "#f3f3f4",
+        "on-primary-fixed-variant": "#185200",
+        "tertiary": "#5d5f5f",
+        "secondary-fixed-dim": "#a2cbf3",
+        "error": "#ba1a1a",
+        "on-primary-container": "#0c3400",
+        "primary-fixed": "#8afd5d",
+        "on-primary-fixed": "#052100",
+        "secondary-fixed": "#cde5ff",
+        "surface-bright": "#f9f9f9"
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "space-sm": "0.5rem",
+        "space-xl": "2.5rem",
+        "gutter": "1rem"
+      },
+      fontFamily: {
+        "headline-sm": ["Hanken Grotesk", "sans-serif"],
+        "label-lg": ["Hanken Grotesk", "sans-serif"],
+        "body-md": ["Hanken Grotesk", "sans-serif"],
+        "headline-lg-mobile": ["Hanken Grotesk", "sans-serif"],
+        "headline-lg": ["Hanken Grotesk", "sans-serif"],
+        "label-md": ["Hanken Grotesk", "sans-serif"],
+        "body-sm": ["Hanken Grotesk", "sans-serif"],
+        "headline-md": ["Hanken Grotesk", "sans-serif"],
+        "label-sm": ["Hanken Grotesk", "sans-serif"],
+        "body-lg": ["Hanken Grotesk", "sans-serif"]
+      },
+      fontSize: {
+        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;font-family:'Hanken Grotesk',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhcZRdG-SQgggN6XG6aN5mt_8OlPNPuXVutxtFV0o1BE2YgnyaqTv3A7PxkQ3oymx7tzNBrQXCBcRtvhf6KUgI2hoFd_sKFnzYgBgrryBsbWajwgI1VMlg6qApWMQQW6fnetmM3Pcoqyd7S0ZDtvHJdZBymKi_SNnDJnTdaFZTuF5eHAqZT_0vFq278Jm-NQX9Cb-tKzc71yRFk6XUP5FcoYEJFaE4JFmNePz-W5k"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider truncate">RRHH Corporativo</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Seguimiento</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-gutter pb-space-xl">
+<!-- Dynamic Welcome & Quick Metric Banner (Fidelity Modern Green Gradient) -->
+<div class="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary-container text-on-primary rounded-xl p-space-md shadow-md mt-space-sm mb-space-md">
+<div class="flex items-center justify-between relative z-10">
+<div class="flex flex-col gap-0.5 min-w-0 pr-space-sm">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider font-semibold">Panel Colaborador</span>
+<h2 class="font-headline-md text-headline-md tracking-tight truncate font-bold">Seguimiento de Novedades</h2>
+<p class="font-body-sm text-body-sm text-white/90">Monitorea y adjunta comprobantes a tus solicitudes</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[28px] text-white" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+</div>
+<!-- Visual decorative wave SVG -->
+<svg class="absolute -right-8 -bottom-10 w-44 h-44 text-white/10 pointer-events-none" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="40"></circle>
+<path d="M10,90 Q50,30 90,90 Z"></path>
+</svg>
+</div>
+<!-- Metric Badges Row (Horizontal Grid) -->
+<div class="grid grid-cols-4 gap-space-xs mb-space-md">
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-lg p-space-sm shadow-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Total</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">12</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">Registradas</span>
+</div>
+<div class="bg-amber-50 border border-amber-200/60 text-amber-900 rounded-lg p-space-sm shadow-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-amber-700 uppercase font-semibold">Revisión</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-amber-600 font-bold">3</span>
+<span class="font-label-sm text-[10px] text-amber-800 truncate">En proceso</span>
+</div>
+<div class="bg-emerald-50 border border-emerald-200/60 text-emerald-950 rounded-lg p-space-sm shadow-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-emerald-700 uppercase font-semibold">Listas</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">8</span>
+<span class="font-label-sm text-[10px] text-emerald-800 truncate">Aprobadas</span>
+</div>
+<div class="bg-error-container/60 border border-error-container text-on-error-container rounded-lg p-space-sm shadow-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold">Rechazo</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-error font-bold">1</span>
+<span class="font-label-sm text-[10px] text-on-error-container truncate">Observada</span>
+</div>
+</div>
+<!-- Search & Fast Filters -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-10 bg-surface-container-lowest border border-outline-variant/50 rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="searchInput" placeholder="Buscar por ID (#NOV...) o motivo" type="text"/>
+<button aria-label="Limpiar búsqueda" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface text-[18px]" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-0.5 no-scrollbar">
+<button class="filter-chip h-8 px-3 rounded-full font-label-md text-label-md bg-primary text-on-primary whitespace-nowrap shadow-sm transition-all flex items-center gap-1.5" data-filter="all" type="button">
+<span>Todos</span>
+<span class="bg-white/25 text-on-primary rounded-full px-1.5 text-[10px] font-bold">12</span>
+</button>
+<button class="filter-chip h-8 px-3 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant whitespace-nowrap shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5" data-filter="pending" type="button">
+<span>Pendientes</span>
+<span class="bg-surface-container-high text-on-surface-variant rounded-full px-1.5 text-[10px]">3</span>
+</button>
+<button class="filter-chip h-8 px-3 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant whitespace-nowrap shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5" data-filter="approved" type="button">
+<span>Aprobados</span>
+<span class="bg-surface-container-high text-on-surface-variant rounded-full px-1.5 text-[10px]">8</span>
+</button>
+<button class="filter-chip h-8 px-3 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant whitespace-nowrap shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5" data-filter="rejected" type="button">
+<span>Rechazados</span>
+<span class="bg-surface-container-high text-on-surface-variant rounded-full px-1.5 text-[10px]">1</span>
+</button>
+</div>
+</div>
+<!-- Cards List Section -->
+<div class="flex flex-col gap-space-md mb-24" id="cardsContainer">
+<!-- TARJETA 1: Incapacidad médica (Aprobada) -->
+<article class="novelty-card bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" data-category="approved">
+<!-- Header row: Tabular ID & Badge -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">local_hospital</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface tracking-wider">#NOV-2024-089</span>
+<span class="font-body-sm text-[11px] text-outline">Registrada: 24 Oct 2024, 08:30 AM</span>
+</div>
+</div>
+<span class="h-6 px-2.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-200 font-label-sm text-label-sm flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          APROBADA
+        </span>
+</div>
+<!-- Main Info -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 border border-outline-variant/20">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Incapacidad médica 3 días</h3>
+<span class="font-label-md text-label-md text-primary font-bold">EPS Sánitas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reposo prescrito por cuadro viral agudo con certificado médico oficial.</p>
+</div>
+<!-- Visual Timeline (4 steps) -->
+<div class="py-1">
+<div class="flex items-center justify-between relative px-2">
+<!-- Connector line -->
+<div class="absolute left-6 right-6 top-3 h-0.5 bg-emerald-200 -z-0"></div>
+<!-- Node 1 -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Solicitud</span>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Líder</span>
+</div>
+<!-- Node 3 -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold">RRHH</span>
+</div>
+<!-- Node 4 -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-emerald-100 text-primary border border-emerald-300 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold">Nómina</span>
+</div>
+</div>
+</div>
+<!-- Footer & Evidences -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">attach_file</span>
+<span class="font-label-md text-label-md text-outline">2 soportes validados</span>
+</div>
+<button class="h-8 px-3 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 text-primary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver detalle</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- TARJETA 2: Permiso personal / Trámite legal (En Revisión RRHH) -->
+<article class="novelty-card bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" data-category="pending">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-amber-50 border border-amber-200/50 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface tracking-wider">#NOV-2024-092</span>
+<span class="font-body-sm text-[11px] text-outline">Registrada: 26 Oct 2024, 02:15 PM</span>
+</div>
+</div>
+<span class="h-6 px-2.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200 font-label-sm text-label-sm flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px] text-amber-700">hourglass_top</span>
+          EN REVISIÓN RRHH
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 border border-outline-variant/20">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Permiso personal / Trámite legal</h3>
+<span class="font-label-md text-label-md text-outline">Medio día</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparecencia notarial para firma de escrituras. Requiere validación directiva.</p>
+</div>
+<!-- Timeline Progress -->
+<div class="py-1">
+<div class="flex items-center justify-between relative px-2">
+<div class="absolute left-6 right-6 top-3 h-0.5 bg-surface-container-highest -z-0"></div>
+<!-- Node 1 (Done) -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Solicitud</span>
+</div>
+<!-- Node 2 (Done) -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Líder OK</span>
+</div>
+<!-- Node 3 (Active Review) -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center ring-2 ring-amber-500 shadow-xs">
+<span class="material-symbols-outlined text-[13px] animate-spin">sync</span>
+</div>
+<span class="font-label-sm text-[10px] text-amber-800 font-bold">RRHH</span>
+</div>
+<!-- Node 4 (Pending) -->
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Nómina</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+<span class="font-label-md text-label-md text-outline">1 soporte adjunto (PDF)</span>
+</div>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver estado</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- TARJETA 3: Calamidad doméstica (Pendiente de Soporte) -->
+<article class="novelty-card bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" data-category="pending">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-amber-50 border border-amber-200/50 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface tracking-wider">#NOV-2024-095</span>
+<span class="font-body-sm text-[11px] text-outline">Registrada: Ayer, 06:45 PM</span>
+</div>
+</div>
+<span class="h-6 px-2.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200 font-label-sm text-label-sm flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px] text-amber-700">notification_important</span>
+          PENDIENTE SOPORTE
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 border border-outline-variant/20">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Calamidad doméstica</h3>
+<span class="font-label-md text-label-md text-error font-bold">24h restantes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inundación repentina en domicilio. Falta certificar reporte de emergencia o fotografías.</p>
+</div>
+<!-- Action Prompt Banner within card -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">upload_file</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sin documentos adjuntos</span>
+<span class="font-body-sm text-[11px] text-outline">Formatos permitidos: PDF, JPG, PNG</span>
+</div>
+</div>
+<button class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Adjuntar</span>
+</button>
+</div>
+<!-- Timeline -->
+<div class="py-1">
+<div class="flex items-center justify-between relative px-2">
+<div class="absolute left-6 right-6 top-3 h-0.5 bg-surface-container-highest -z-0"></div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Solicitud</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">priority_high</span>
+</div>
+<span class="font-label-sm text-[10px] text-amber-800 font-bold">Soporte</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Líder</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Nómina</span>
+</div>
+</div>
+</div>
+</article>
+<!-- TARJETA 4: Llegada tarde justificada (Rechazada) -->
+<article class="novelty-card bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" data-category="rejected">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">timer_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface tracking-wider">#NOV-2024-078</span>
+<span class="font-body-sm text-[11px] text-outline">Registrada: 15 Oct 2024</span>
+</div>
+</div>
+<span class="h-6 px-2.5 rounded-full bg-error-container text-on-error-container border border-error/20 font-label-sm text-label-sm flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+          RECHAZADA
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 border border-outline-variant/20">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Llegada tarde justificada</h3>
+<span class="font-label-md text-label-md text-outline">Retraso 45m</span>
+</div>
+<div class="bg-error-container/40 rounded-lg p-2 flex items-start gap-2 mt-1 border border-error-container">
+<span class="material-symbols-outlined text-error text-[18px] mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-error-container font-bold">Motivo de rechazo:</span>
+<span class="font-body-sm text-[12px] text-on-error-container">Fuera de plazo reglamentario (&gt; 48 horas sin notificación previa al líder).</span>
+</div>
+</div>
+</div>
+<!-- Timeline (Rejection state) -->
+<div class="py-1">
+<div class="flex items-center justify-between relative px-2">
+<div class="absolute left-6 right-6 top-3 h-0.5 bg-surface-container-highest -z-0"></div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Solicitud</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-error text-on-error flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</div>
+<span class="font-label-sm text-[10px] text-error font-bold">Líder</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-[13px]">block</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">RRHH</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-outline flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-[13px]">block</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Nómina</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline">folder_off</span>
+<span class="font-label-md text-label-md text-outline">Cerrado sin afectación a pago</span>
+</div>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver acta</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Bottom Floating Call-To-Action Button (Fidelity Modern Green #39a900) -->
+<div class="fixed bottom-20 left-0 right-0 px-gutter pointer-events-none z-40 flex justify-center">
+<button class="pointer-events-auto w-full max-w-sm h-12 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg shadow-lg shadow-primary/20 active:scale-98 hover:bg-primary transition-all flex items-center justify-center gap-2 font-semibold" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Nueva Justificación</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple filter chips interactivity
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.novelty-card');
+  const searchInput = document.getElementById('searchInput');
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      // Reset all chips
+      chips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'border-transparent');
+        c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/50');
+        const countSpan = c.querySelector('span:last-child');
+        if (countSpan) {
+          countSpan.classList.remove('bg-white/25', 'text-on-primary');
+          countSpan.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        }
+      });
+      // Activate clicked chip
+      chip.classList.add('bg-primary', 'text-on-primary');
+      chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/50');
+      const activeCount = chip.querySelector('span:last-child');
+      if (activeCount) {
+        activeCount.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        activeCount.classList.add('bg-white/25', 'text-on-primary');
+      }
+
+      const filterVal = chip.getAttribute('data-filter');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filterVal === 'all' || cat === filterVal) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Simple instantaneous search by ticket ID or description
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(term)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="justificaciones" href="#"><span class="material-symbols-outlined text-[22px]">assignment_turned_in</span><span class="font-label-sm text-label-sm">Justificaciones</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 transition-colors text-primary font-bold" data-path="seguimiento" href="#"><span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">timeline</span><span class="font-label-sm text-label-sm">Seguimiento</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="pruebas-validacion" href="#"><span class="material-symbols-outlined text-[22px]">fact_check</span><span class="font-label-sm text-label-sm">Validación</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="documentacion" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">Documentos</span></a></div></nav></body></html>

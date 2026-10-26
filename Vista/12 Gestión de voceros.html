@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#1978e5",
+        "on-primary": "#ffffff",
+        "primary-container": "#dce8ff",
+        "on-primary-container": "#001a40",
+        "secondary": "#2563eb",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#e0edff",
+        "on-secondary-container": "#0c3b82",
+        "tertiary": "#059669",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#d1fae5",
+        "on-tertiary-container": "#065f46",
+        "surface": "#f9f9f9",
+        "on-surface": "#1a1c1c",
+        "surface-bright": "#f9f9f9",
+        "surface-dim": "#dadada",
+        "surface-variant": "#e2e2e2",
+        "on-surface-variant": "#4b5563",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f3f4",
+        "surface-container": "#eeeeee",
+        "surface-container-high": "#e8e8e8",
+        "surface-container-highest": "#e2e2e2",
+        "outline": "#717785",
+        "outline-variant": "#c1c6d5",
+        "error": "#dc2626",
+        "on-error": "#ffffff",
+        "error-container": "#fee2e2",
+        "on-error-container": "#991b1b"
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-xs": "0.25rem",
+        "gutter": "1rem",
+        "margin-mobile": "1rem",
+        "space-md": "1rem",
+        "gutter-mobile": "0.75rem",
+        "space-sm": "0.5rem",
+        "margin": "1.25rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2rem"
+      },
+      fontFamily: {
+        "headline-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "badge-indicator": ["Inter"],
+        "headline-sm": ["Inter"],
+        "label-lg": ["Inter"],
+        "display-lg": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "body-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-md": ["Inter"]
+      },
+      fontSize: {
+        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "badge-indicator": ["10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+        "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "display-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+      }
+    }
+  }
+};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="Vocería &amp; Integrantes Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1X7UELi0qnNrOdss7q7Dayi2NlUww4L5-obLroGCeHv7lwd7ab1E7ejWtIMM31Vj8cNWdZNp-Cy0UHoM4So0k9a0wL-sXLmTUIrKtOnf86Pfv9Zt5NvQifHxGFdCjPbNv3j5tGh4BoQzgFVysoswYhXnZPnW_dWkX41SGAAca7HVCu2CKzdq0xlTJA5eS5i6zm5n7TmpBcfkOMfs-wq8b2YTNSOyjBvXsTkoprFQ3qu"><div class="flex flex-col min-w-0"><span class="text-label-sm font-label-sm text-primary uppercase tracking-wider leading-none">SGI Vocería</span><span class="text-headline-sm font-headline-sm text-on-surface truncate">Voceros</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 transition-colors"><span class="material-symbols-outlined">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-space-xs ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASOP9het89v__b9TfH4fTFIO50LwptS_WXeQEm2slSMR1cmHlgUSEZJ-z-3ieG5W3-iR_GzNAqHoZXLqXrfmFj6UZk6pxtOk0KgW3V_UDs2kQRlEpxeEYE3WZft13emB4V4CqxvkYmR1kGHavN7-bf_0dG_vN3NuFgb5acZHzPmGKN8CH35OCZQ_Y2fOgi3afcGHuUBuaKHGONUw3pPrVFQDVPCE8WOxCZkI9fc1s"></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex w-2.5 h-2.5 rounded-full bg-[#39a900] animate-pulse"></span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-[#226d00] font-semibold">Sala de Prensa &amp; Acreditación</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#226d00]">verified_user</span> Activo
+      </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+      Control en tiempo real de portavoces autorizados, disponibilidad ante medios y expedientes de acreditación.
+    </p>
+</div>
+<div class="w-full overflow-x-auto no-scrollbar py-space-xs px-margin-mobile flex gap-space-sm">
+<div class="flex-shrink-0 w-44 p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-[#eaf7e3] text-[#226d00] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+<span class="text-badge-indicator font-badge-indicator text-on-tertiary-container bg-tertiary-container px-1.5 py-0.5 rounded font-semibold">98% Válido</span>
+</div>
+<div class="mt-space-sm">
+<span class="text-display-lg-mobile font-display-lg-mobile text-on-surface leading-none block">28</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 block leading-tight">Voceros Acreditados</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-44 p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-tertiary-container text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">podium</span>
+</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+</div>
+<div class="mt-space-sm">
+<span class="text-display-lg-mobile font-display-lg-mobile text-on-surface leading-none block">05</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 block leading-tight">Disponibles hoy Medios</span>
+</div>
+</div>
+<div class="flex-shrink-0 w-44 p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+<span class="text-badge-indicator font-badge-indicator text-error bg-error-container px-1.5 py-0.5 rounded font-semibold">Urgente</span>
+</div>
+<div class="mt-space-sm">
+<span class="text-display-lg-mobile font-display-lg-mobile text-on-surface leading-none block">03</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 block leading-tight">Acreditaciones Pendientes</span>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile mt-space-md">
+<div class="p-1 rounded-xl bg-surface-container flex items-center" role="tablist">
+<button aria-selected="true" class="flex-1 py-1.5 rounded-lg bg-surface-container-lowest text-[#226d00] font-semibold shadow-sm text-label-sm font-label-sm transition-all text-center" id="tab-acreditados" role="tab">
+        Acreditados
+      </button>
+<button aria-selected="false" class="flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-all text-center" id="tab-capacitacion" role="tab">
+        En Validación
+      </button>
+<button aria-selected="false" class="flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-all text-center" id="tab-historico" role="tab">
+        Histórico Medios
+      </button>
+</div>
+</div>
+<div class="w-full overflow-x-auto no-scrollbar px-margin-mobile mt-space-sm flex gap-space-xs items-center">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 flex-shrink-0 mr-1">
+<span class="material-symbols-outlined text-[16px] text-primary">tune</span> Tema:
+    </span>
+<button class="px-3 py-1 rounded-full bg-[#39a900] text-white text-label-sm font-label-sm flex-shrink-0 flex items-center gap-1 shadow-sm font-medium">
+      Todos
+    </button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-label-sm font-label-sm flex-shrink-0 transition-colors">
+      Economía
+    </button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-label-sm font-label-sm flex-shrink-0 transition-colors">
+      Política Pública
+    </button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-label-sm font-label-sm flex-shrink-0 transition-colors">
+      Salud &amp; Bienestar
+    </button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-label-sm font-label-sm flex-shrink-0 transition-colors">
+      Derechos Humanos
+    </button>
+</div>
+<div class="px-margin-mobile mt-space-md flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm transition-transform active:scale-[0.99]">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/20">
+<img class="w-full h-full object-cover" data-alt="Close up professional portrait of a Hispanic woman doctor in formal corporate blazer with stethoscope in institutional communications setting soft clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB03KSHhUK4rIXvUh5oZ2990qXRagpaozSotL5frByNviWlOyqIhFZ0N6MkdG4fdu0ksiu3PoTeQJKcGyVlV-kxsPJLbRui_52VgApW3H7X2-ZNulZ5Y1j19pApEq5bCLfRwUvJ2k5bbJQ260ebEgUlJZGvkxZA1IFzgHgTU_yuni5TXNxj_ki1Mr_DHl6Hm-k3_5mYS7F9RteLn1pMjnwwBrFBB_Zm8z-h63ZyKd8">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="text-headline-sm font-headline-sm text-on-surface truncate">Dra. Mariana Rivas</span>
+<span class="material-symbols-outlined text-[#226d00] text-[18px]" title="Identidad Verificada">verified</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant truncate">Especialista en Epidemiología y Gestión</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container text-label-sm font-label-sm flex items-center gap-1 flex-shrink-0 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Vigente 2025
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-0.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+          Políticas Públicas
+        </span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+          Salud Comunitaria
+        </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-[#226d00]">live_tv</span>
+<span class="font-medium text-on-surface">Disponible (Llamadas / TV)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm bg-surface-container-lowest text-[#226d00] font-medium px-2 py-0.5 rounded shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-[#226d00]">mic</span>
+<span class="">14 intervenciones</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-2.5 px-space-sm rounded-lg bg-[#39a900] hover:bg-[#329600] text-white text-label-md font-label-md flex items-center justify-center gap-1.5 active:opacity-90 shadow-md transition-all">
+<span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
+<span class="">Asignar Entrevista / Vocería</span>
+</button>
+<button aria-label="Ver historial" class="w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">feed</span>
+</button>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm transition-transform active:scale-[0.99]">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-error/20">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a young male policy expert wearing navy blazer and glasses looking confident and ready for press conference neutral corporate studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDneJOe-gdgmFrqpGvr47sVqhARffJcym_DZoNt3X3W3QIjcVYaylw-7gJWwd5pYa97QyrbkSdj4a8UZuabpL-YL8pDkzXeIHquoRzx61E3gpB7XAUh0hKToPj_MxUMYSPeOKsVSVKCCxMXdmzIPXJN2KbvvZwWSkcCPIqLZSJ5jJy9tFZ2MCC70b35EWuzMc6zwXyLz7p8_YkXAKGrS_FVrLBSbFJuvmaVmS4O1UM">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-error ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="text-headline-sm font-headline-sm text-on-surface truncate">Lic. Alejandro Torres</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant truncate">Asesor de Estrategia Digital &amp; IA</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error text-label-sm font-label-sm flex items-center gap-1 flex-shrink-0 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> Validación Pendiente
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-0.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+          Tecnología e Innovación
+        </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-error">assignment_late</span>
+<span class="">Falta test de simulacro de crisis</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Módulo 3/4</span>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-2.5 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high hover:text-primary text-label-md font-label-md flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span class="">Revisar Credenciales</span>
+</button>
+<button aria-label="Enviar recordatorio" class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</button>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm transition-transform active:scale-[0.99]">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/20">
+<img class="w-full h-full object-cover" data-alt="Portrait of an experienced Latina civil engineer woman in formal white shirt with warm friendly professional smile clean institutional studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWlBGPE8pUVLdIGtpG9KiM1hD_p2LZ97EPDNjsa5GrjIGO0wTwF-eZ8XARYZ2859ZvTB_opRhEWJMSPngC_tPKfvyIGVI7MXWysWO5Ware5eBodsXGoxAQzJeBZ1R-A1SEZyDYUZ9KBfdubrkPJoQaiUgO5fWoOd7WR9GMuyPH2aBSW51ItyVaYWYvKiLmVsdRbBqIZqKW0JUvMoh8cRydiaQ8Frx8A8k3udmjrA">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="text-headline-sm font-headline-sm text-on-surface truncate">Ing. Sofía Valenzuela</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant truncate">Dirección de Obras &amp; Transporte</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container text-label-sm font-label-sm flex items-center gap-1 flex-shrink-0 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Acreditada
+        </span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-0.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+          Infraestructura Sostenible
+        </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">explore</span>
+<span class="text-on-surface font-medium">En Comisión de Terreno</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Retorno: 18:00 hrs</span>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-2.5 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high hover:text-primary text-label-md font-label-md flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[18px]">contact_phone</span>
+<span class="">Contactar Enlace de Prensa</span>
+</button>
+<button aria-label="Ver agenda" class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile mt-space-lg mb-space-md flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between border border-outline-variant/20">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-[#226d00] shadow-sm">
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-lg font-label-lg text-on-surface font-medium">Dossier de Vocería 2025</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">PDF oficial con contactos cifrados</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-[#226d00] font-medium text-label-sm font-label-sm shadow-sm hover:bg-surface-bright active:scale-95 transition-all border border-outline-variant/30">
+        Descargar
+      </button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="py-3 px-space-sm rounded-xl bg-[#39a900] hover:bg-[#329600] text-white text-label-md font-label-md flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span class="">Acreditar Vocero</span>
+</button>
+<button class="py-3 px-space-sm rounded-xl bg-[#eaf7e3] text-[#226d00] font-semibold text-label-md font-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all border border-[#226d00]/20">
+<span class="material-symbols-outlined text-[20px] text-[#226d00]">contact_mail</span>
+<span class="">Directorio Medios</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const tabs = ['tab-acreditados', 'tab-capacitacion', 'tab-historico'];
+    tabs.forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) {
+        btn.addEventListener('click', () => {
+          tabs.forEach(otherId => {
+            const otherBtn = document.getElementById(otherId);
+            if (otherBtn) {
+              otherBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm');
+              otherBtn.classList.add('text-on-surface-variant');
+              otherBtn.setAttribute('aria-selected', 'false');
+            }
+          });
+          btn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant');
+          btn.setAttribute('aria-selected', 'true');
+        });
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.04)] border-t border-outline-variant/20" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="directorio" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="text-label-sm font-label-sm mt-0.5">Directorio</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="registro" href="#"><span class="material-symbols-outlined text-[24px]">person_add</span><span class="text-label-sm font-label-sm mt-0.5">Registro</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-[#226d00] font-label-md font-semibold" data-path="voceros" href="#"><span class="material-symbols-outlined text-[24px]">campaign</span><span class="text-label-sm font-label-sm mt-0.5">Voceros</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="mi-perfil" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="text-label-sm font-label-sm mt-0.5">Mi Perfil</span></a></div></nav>
+
+</body></html>
