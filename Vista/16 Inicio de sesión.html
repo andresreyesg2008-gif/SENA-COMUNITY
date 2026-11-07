@@ -5,6 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
   <meta content="mobile_blank" name="shell-type"/>
+  <title>Portal de Comunicados</title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -101,106 +102,114 @@
   </style>
 </head>
   <body class="bg-surface font-body text-on-surface antialiased flex flex-col min-h-screen pt-safe pb-safe">
-    <main class="flex flex-col relative w-full bg-surface min-h-screen justify-between">
-      <div class="flex flex-col w-full px-margin pb-space-xl">
+    <!-- El div contenedor se fusionó con main -->
+    <main class="flex flex-col relative w-full bg-surface min-h-screen px-margin pb-space-xl">
+
 <!-- Subtle decorative ambient glow logo -->
-<div class="relative flex flex-col items-center pt-space-lg pb-space-md text-center">
-<div class=" behindabsolute -top-6 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<header class="relative flex flex-col items-center pt-space-lg pb-space-md text-center">
+<!-- Decorativo: no tiene equivalente semántico, se oculta a lectores de pantalla -->
+<div aria-hidden="true" class="absolute -top-6 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
 <!-- Institutional Brand Logo Badge -->
-<div class="relative flex items-center justify-center w-20 h-20 rounded-xl bg-surface-container-lowest border border-surface-container-high shadow-sm mb-space-md">
+<figure class="relative flex items-center justify-center w-20 h-20 rounded-xl bg-surface-container-lowest border border-surface-container-high shadow-sm mb-space-md">
 <img alt="Logo Comunicados Institucionales" class="w-14 h-14 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1X4QekWYBDKtDisp-fyb6_yMEXhjExyO3HcVLMtezfQ84f71MuINlQVa4P6Q2Vmd-zbW5u4G4v1sA2gJ7bYoOfupsuo3LvUKgz_BpJhAAhB4ivD-2oNQlYtHGDKy2P-TkA9PHMd_nqQJ5dKDzV5qbLqn75GS4kNMbBIyf6cD6JihPFXiw6WvfFrW1zNsrf0R-BZdQ7baBBDm8MGn9Emcu5TYWisVh164azcqLgbWKq76Q"/>
-</div>
+</figure>
 <!-- Hierarchy Titles -->
-<span class="font-label text-xs font-semibold text-secondary uppercase tracking-wider mb-space-xs">Servicio de Autenticación Central</span>
+<p class="font-label text-xs font-semibold text-secondary uppercase tracking-wider mb-space-xs">Servicio de Autenticación Central</p>
 <h1 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Portal de Comunicados</h1>
 <p class="font-body text-sm text-on-surface-variant max-w-xs mt-space-xs leading-relaxed">
       Ingresa con tus credenciales corporativas para consultar notificaciones y circulares oficiales.
     </p>
-</div>
+</header>
+
 <!-- Main Login Card Container -->
 <!--Apartado de inicio de seccion-->
-<div class="flex flex-col w-full bg-surface-container-lowest rounded-xl border border-surface-container shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] p-5 mt-space-xs">
+<section aria-label="Inicio de sesión" class="flex flex-col w-full bg-surface-container-lowest rounded-xl border border-surface-container shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] p-5 mt-space-xs">
 <form class="flex flex-col gap-4" id="institutional-login-form" onsubmit="event.preventDefault();">
+
 <!-- Field: User / Corporate Email -->
   <!--Solucitud de usuario / Email-->
-<div class="flex flex-col gap-1.5">
+<p class="flex flex-col gap-1.5">
 <label class="font-label text-xs font-semibold text-on-surface" for="username-input">
           Correo institucional o usuario
         </label>
-<div class="relative flex items-center">
-<span class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none">
+<span class="relative flex items-center">
+<span class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none" aria-hidden="true">
             alternate_email
           </span>
 <input autocomplete="username" class="w-full h-12 pl-11 pr-3 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all" id="username-input" name="username" placeholder="usuario@institucion.edu" required="" type="text"/>
-</div>
-</div>
+</span>
+</p>
+
 <!-- Field: Password -->
   <!--Requerimiento de contraseña-->
-<div class="flex flex-col gap-1.5">
+<p class="flex flex-col gap-1.5">
 <label class="font-label text-xs font-semibold text-on-surface" for="password-input">
           Contraseña
         </label>
-<div class="relative flex items-center">
-<span class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none">
+<span class="relative flex items-center">
+<span class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none" aria-hidden="true">
             lock
           </span>
 <input autocomplete="current-password" class="w-full h-12 pl-11 pr-11 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all" id="password-input" name="password" placeholder="••••••••••••" required="" type="password"/>
 <button aria-label="Alternar visibilidad de contraseña" class="absolute right-1 w-10 h-10 flex items-center justify-center text-outline hover:text-on-surface transition-colors rounded-full" id="toggle-password-btn" type="button">
-<span class="material-symbols-outlined text-[20px]" id="password-eye-icon">
+<span class="material-symbols-outlined text-[20px]" id="password-eye-icon" aria-hidden="true">
               visibility
             </span>
 </button>
-</div>
-</div>
+</span>
+</p>
+
 <!-- Controls: Remember Me + Forgot Password -->
   <!--Control: Recordar usuario + ¿Olvidaste la contraseña?-->
 <div class="flex items-center justify-between pt-0.5">
 <label class="flex items-center gap-2 cursor-pointer select-none py-1">
-<div class="relative flex items-center justify-center w-5 h-5">
+<span class="relative flex items-center justify-center w-5 h-5">
 <input class="peer appearance-none w-5 h-5 rounded border border-surface-container-highest bg-surface-container-low checked:bg-primary-container checked:border-primary-container cursor-pointer transition-colors" id="remember-session" name="remember" type="checkbox"/>
-<span class="material-symbols-outlined absolute text-[16px] text-white opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity font-bold">
+<span class="material-symbols-outlined absolute text-[16px] text-white opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity font-bold" aria-hidden="true">
               check
             </span>
-</div>
+</span>
 <span class="font-label text-xs font-medium text-on-surface-variant">Recordar sesión</span>
 </label>
 <a class="font-label text-xs font-semibold text-secondary hover:underline select-none" href="#recuperar">
           ¿Olvidaste tu contraseña?
         </a>
 </div>
+
 <!-- Primary Action Submit -->
 <button class="w-full h-12 mt-1 rounded-lg bg-primary-container text-white font-label text-sm font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container/90 active:scale-[0.99] transition-all" id="btn-login-submit" type="submit">
 <span>Iniciar Sesión</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+<span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
 </button>
 </form>
-<!-- Visual Divider -->
-<div class="relative flex items-center justify-center my-4">
-<div class="w-full h-px bg-surface-container"></div>
-<span class="absolute px-3 bg-surface-container-lowest font-label text-xs font-semibold text-outline uppercase tracking-wider">o</span>
-</div>
+
+<!-- Visual Divider: sin divs, las líneas son pseudo-elementos -->
+<p class="my-4 flex items-center gap-3 font-label text-xs font-semibold text-outline uppercase tracking-wider before:h-px before:flex-1 before:bg-surface-container after:h-px after:flex-1 after:bg-surface-container">o</p>
+
 <!-- SSO / Active Directory Alternative -->
 <button class="w-full h-12 rounded-lg bg-surface-container-low border border-surface-container hover:bg-surface-container text-secondary font-label text-sm font-semibold flex items-center justify-center gap-2.5 active:scale-[0.99] transition-all" id="btn-sso-login" type="button">
-<span class="material-symbols-outlined text-[20px] text-secondary">
+<span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">
         vpn_key
       </span>
 <span>Acceso con SSO / Directorio Activo</span>
 </button>
-</div>
+</section>
+
 <!-- Institutional Security & Verification Note -->
 <!--Nota de Seguridad y verificaciion-->
-<div class="mt-6 flex flex-col items-center gap-2 text-center">
-<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container text-on-surface-variant">
-<span class="material-symbols-outlined text-primary-container text-[16px]">
+<footer class="mt-6 flex flex-col items-center gap-2 text-center">
+<p class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container text-[16px]" aria-hidden="true">
         verified_user
       </span>
 <span class="font-label text-xs font-medium">Conexión cifrada TLS 1.3 • Protocolo SAML 2.0</span>
-</div>
+</p>
 <p class="font-body text-xs text-outline max-w-xs mt-1 leading-relaxed">
       ¿Problemas de ingreso? Contacta a la Mesa de Ayuda TI en <a class="text-secondary font-semibold hover:underline" href="mailto:soporte@institucion.edu">soporte@institucion.edu</a>
 </p>
-</div>
-</div>
+</footer>
+</main>
+
 <script>
   (function initLoginInteractions() {
     const passwordInput = document.getElementById('password-input');
@@ -226,6 +235,11 @@
           ssoBtn.innerHTML = originalText;
         }, 1800);
       });
+    }
+  })();
+</script>
+</body>
+</html>
     }
   })();
 </script></main></body></html>
