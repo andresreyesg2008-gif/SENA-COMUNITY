@@ -1,22 +1,35 @@
 <!--Tipo de documento-->
 <!DOCTYPE html>
-
+<!-- Raíz del documento. lang="es" indica el idioma a lectores de pantalla,
+     traductores y buscadores -->
 <html lang="es"><head>
+  <!-- Codificación de caracteres: necesaria para tildes y la ñ -->
   <meta charset="utf-8"/>
+  <!-- Diseño móvil: ajusta el ancho al dispositivo, bloquea el zoom y usa
+       toda la pantalla (viewport-fit=cover para pantallas con notch) -->
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <!-- Metadato propio de la plataforma de diseño; no afecta al navegador -->
   <meta content="mobile_blank" name="shell-type"/>
+   <!-- Título que aparece en la pestaña del navegador -->
   <title>Portal de Comunicados</title>
+  <!-- Fuentes: preconnect abre la conexión con Google Fonts antes de
+       pedir los archivos, así carga más rápido -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <!-- Inter: tipografía del texto (pesos 400 a 700) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Material Symbols: fuente de íconos (candado, ojo, flecha, etc.) -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-  <!--Encabezado CSS -->
+  <!--CSS base-->
   <style>@layer base
     {html,body{width:100vw;margin:0;padding:0;}
                      body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
   </style>
+  <!-- Tailwind CSS por CDN, con los plugins de formularios y container queries -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
   </script>
+  <!-- Configuración de Tailwind: paleta de colores, bordes redondeados,
+       espaciados y tipografía personalizados del portal -->
   <script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
@@ -96,37 +109,44 @@
     },
   }
 </script>
+   <!-- Alto mínimo del cuerpo: 884px o toda la pantalla, lo que sea mayor -->
   <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
 </head>
+  <!--BODY: todo lo que se ve en pantalla 
+  pt-safe / pb-safe respetan las zonas seguras del celular-->
   <body class="bg-surface font-body text-on-surface antialiased flex flex-col min-h-screen pt-safe pb-safe">
-    <!-- El div contenedor se fusionó con main -->
+     <!-- Contenido principal de la página (solo debe haber un <main>) -->
     <main class="flex flex-col relative w-full bg-surface min-h-screen px-margin pb-space-xl">
-
-<!-- Subtle decorative ambient glow logo -->
+<!--    SECCIÓN 1 - ENCABEZADO DE MARCA
+        Logo, nombre del servicio, título principal (h1) y descripción   -->
 <header class="relative flex flex-col items-center pt-space-lg pb-space-md text-center">
-<!-- Decorativo: no tiene equivalente semántico, se oculta a lectores de pantalla -->
+<!-- Brillo verde difuso de fondo. Es solo decorativo (aria-hidden lo
+           oculta a lectores de pantalla). Se deja como div porque no tiene
+           equivalente semántico -->
 <div aria-hidden="true" class="absolute -top-6 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-<!-- Institutional Brand Logo Badge -->
+<!-- Logo dentro de una insignia cuadrada. <figure> agrupa la imagen.
+           El alt describe el logo para lectores de pantalla y se muestra
+           si la imagen no carga -->
 <figure class="relative flex items-center justify-center w-20 h-20 rounded-xl bg-surface-container-lowest border border-surface-container-high shadow-sm mb-space-md">
   <!--src es la ruta de la imagen y alt es su texto alternativo
   alt es importante por q es el encargado de leer las imagenes, mostrar el texto de estas en caso de que 
   la imagen no cargue-->
 <img alt="Logo Comunicados Institucionales" class="w-14 h-14 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1X4QekWYBDKtDisp-fyb6_yMEXhjExyO3HcVLMtezfQ84f71MuINlQVa4P6Q2Vmd-zbW5u4G4v1sA2gJ7bYoOfupsuo3LvUKgz_BpJhAAhB4ivD-2oNQlYtHGDKy2P-TkA9PHMd_nqQJ5dKDzV5qbLqn75GS4kNMbBIyf6cD6JihPFXiw6WvfFrW1zNsrf0R-BZdQ7baBBDm8MGn9Emcu5TYWisVh164azcqLgbWKq76Q"/>
 </figure>
-<!-- Hierarchy Titles -->
+<!-- Jerarquía de títulos: etiqueta superior, h1 y descripción -->
 <p class="font-label text-xs font-semibold text-secondary uppercase tracking-wider mb-space-xs">Servicio de Autenticación Central</p>
 <h1 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Portal de Comunicados</h1>
 <p class="font-body text-sm text-on-surface-variant max-w-xs mt-space-xs leading-relaxed">
       Ingresa con tus credenciales corporativas para consultar notificaciones y circulares oficiales.
     </p>
 </header>
-
-<!-- Main Login Card Container -->
-<!--Apartado de inicio de seccion-->
+<!--SECCIÓN 2 - TARJETA DE INICIO DE SESIÓN
+    Contiene el formulario de acceso, un separador y el acceso por SSO.
+    aria-label da nombre a la sección para lectores de pantalla-->
 <section aria-label="Inicio de sesión" class="flex flex-col w-full bg-surface-container-lowest rounded-xl border border-surface-container shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] p-5 mt-space-xs">
   <!-- Formulario de inicio de sesión. onsubmit con preventDefault() bloquea el
      envío real: es una maqueta, por eso no tiene action ni method. -->
