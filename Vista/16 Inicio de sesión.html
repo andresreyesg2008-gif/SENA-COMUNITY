@@ -95,7 +95,8 @@
       },
     },
   }
-</script><style>
+</script>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
@@ -111,6 +112,9 @@
 <div aria-hidden="true" class="absolute -top-6 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
 <!-- Institutional Brand Logo Badge -->
 <figure class="relative flex items-center justify-center w-20 h-20 rounded-xl bg-surface-container-lowest border border-surface-container-high shadow-sm mb-space-md">
+  <!--src es la ruta de la imagen y alt es su texto alternativo
+  alt es importante por q es el encargado de leer las imagenes, mostrar el texto de estas en caso de que 
+  la imagen no cargue-->
 <img alt="Logo Comunicados Institucionales" class="w-14 h-14 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1X4QekWYBDKtDisp-fyb6_yMEXhjExyO3HcVLMtezfQ84f71MuINlQVa4P6Q2Vmd-zbW5u4G4v1sA2gJ7bYoOfupsuo3LvUKgz_BpJhAAhB4ivD-2oNQlYtHGDKy2P-TkA9PHMd_nqQJ5dKDzV5qbLqn75GS4kNMbBIyf6cD6JihPFXiw6WvfFrW1zNsrf0R-BZdQ7baBBDm8MGn9Emcu5TYWisVh164azcqLgbWKq76Q"/>
 </figure>
 <!-- Hierarchy Titles -->
@@ -124,10 +128,18 @@
 <!-- Main Login Card Container -->
 <!--Apartado de inicio de seccion-->
 <section aria-label="Inicio de sesión" class="flex flex-col w-full bg-surface-container-lowest rounded-xl border border-surface-container shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] p-5 mt-space-xs">
+  <!-- Formulario de inicio de sesión. onsubmit con preventDefault() bloquea el
+     envío real: es una maqueta, por eso no tiene action ni method. -->
 <form class="flex flex-col gap-4" id="institutional-login-form" onsubmit="event.preventDefault();">
 
 <!-- Field: User / Corporate Email -->
   <!--Solucitud de usuario / Email-->
+  <!-- Campo de usuario. El for del label coincide con el id del input: al
+       hacer clic en el texto se enfoca el campo y el lector de pantalla lo
+       anuncia. name: nombre con el que viaja el dato al servidor.
+       required: obliga a llenarlo antes de enviar. autocomplete: permite que
+       el navegador sugiera el usuario guardado. placeholder: pista que
+       desaparece al escribir, no reemplaza al label. -->
 <p class="flex flex-col gap-1.5">
 <label class="font-label text-xs font-semibold text-on-surface" for="username-input">
           Correo institucional o usuario
@@ -151,6 +163,7 @@
             lock
           </span>
 <input autocomplete="current-password" class="w-full h-12 pl-11 pr-11 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all" id="password-input" name="password" placeholder="••••••••••••" required="" type="password"/>
+  <!--type="button" evita que el botón envíe el formulario. Sin eso, dentro de un <form> actuaría como submit.-->
 <button aria-label="Alternar visibilidad de contraseña" class="absolute right-1 w-10 h-10 flex items-center justify-center text-outline hover:text-on-surface transition-colors rounded-full" id="toggle-password-btn" type="button">
 <span class="material-symbols-outlined text-[20px]" id="password-eye-icon" aria-hidden="true">
               visibility
@@ -171,6 +184,7 @@
 </span>
 <span class="font-label text-xs font-medium text-on-surface-variant">Recordar sesión</span>
 </label>
+  <!--href="#recuperar" es un enlace interno: lleva a un elemento de esta misma página con id="recuperar"-->
 <a class="font-label text-xs font-semibold text-secondary hover:underline select-none" href="#recuperar">
           ¿Olvidaste tu contraseña?
         </a>
@@ -205,6 +219,7 @@
 <span class="font-label text-xs font-medium">Conexión cifrada TLS 1.3 • Protocolo SAML 2.0</span>
 </p>
 <p class="font-body text-xs text-outline max-w-xs mt-1 leading-relaxed">
+  <!--"href="mailto:soporte@institucion.edu" Ese abre el programa de correo con la dirección ya escrita.-->
       ¿Problemas de ingreso? Contacta a la Mesa de Ayuda TI en <a class="text-secondary font-semibold hover:underline" href="mailto:soporte@institucion.edu">soporte@institucion.edu</a>
 </p>
 </footer>
@@ -240,6 +255,3 @@
 </script>
 </body>
 </html>
-    }
-  })();
-</script></main></body></html>
