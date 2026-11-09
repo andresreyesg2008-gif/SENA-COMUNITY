@@ -1,13 +1,19 @@
 <!--Tipo de documento-->
 <!DOCTYPE html>
-<!--Inicio de html y uso del lang-->
+<!-- Raíz del documento. lang="es" indica el idioma a lectores de pantalla, traductores y buscadores -->
 <html class="h-full" lang="es">
 <head>
+  <!-- Codificación de caracteres: necesaria para tildes y la ñ -->
 <meta charset="utf-8"/>
+  <!-- Diseño móvil: ancho del dispositivo, sin zoom y a pantalla completa (viewport-fit=cover para pantallas con notch) -->
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <!-- Metadato propio de la plataforma de diseño; no afecta al navegador -->
 <meta content="mobile_tab" name="shell-type"/>
+  <!-- Título que aparece en la pestaña del navegador -->
 <title>Gestión de Fichas</title>
+  <!-- Inter: tipografía del texto (pesos 400 a 700) -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Material Symbols: fuente de íconos (campana, lupa, grupos, etc.) -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!--CSS del encabezado-->
 <style>@layer base
@@ -15,7 +21,9 @@
 body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
 body{min-height:max(884px,100dvh);}
 </style>
+  <!-- Tailwind CSS por CDN: genera las clases de utilidad al cargar la página -->
 <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Configuración de Tailwind: paleta de colores, bordes, espaciados y tamaños de texto personalizados del portal -->
 <script id="tailwind-config">
 tailwind.config = {darkMode: "class", theme: {extend:
 {colors: {"secondary-fixed": "#cde5ff", "surface-variant": "#e2e2e2", "surface-container-low": "#f3f3f4", "inverse-primary": "#6fdf43", secondary: "#396285", "surface-container-high": "#e8e8e8", "on-tertiary-fixed-variant": "#454747", "tertiary-fixed": "#e2e2e2", "secondary-container": "#add6fe", "tertiary-container": "#929393", "surface-container": "#eeeeee", "on-surface-variant": "#3f4a38", "surface-dim": "#dadada", "tertiary-fixed-dim": "#c6c6c7", "on-secondary-container": "#335d80", "inverse-surface": "#2f3131", "on-surface": "#1a1c1c", outline: "#6f7b66", "on-background": "#1a1c1c", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#1e4a6c", "on-tertiary-container": "#2a2c2c", primary: "#226d00", "on-primary-container": "#0c3400", "surface-container-lowest": "#ffffff", "surface-tint": "#226d00", "on-error-container": "#93000a", "surface-bright": "#f9f9f9", "primary-fixed": "#8afd5d", "on-tertiary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#becbb3", "on-primary-fixed": "#052100", background: "#f9f9f9", error: "#ba1a1a", "on-primary-fixed-variant": "#185200", "primary-fixed-dim": "#6fdf43", "on-secondary": "#ffffff", "secondary-fixed-dim": "#a2cbf3", surface: "#f9f9f9", "on-error": "#ffffff", "primary-container": "#39a900", "surface-container-highest": "#e2e2e2", tertiary: "#5d5f5f", "error-container": "#ffdad6", "on-secondary-fixed": "#001d32"},
@@ -30,24 +38,32 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}]}}}};
 </script>
 </head>
+  <!--BODY: todo lo que se ve en pantalla. Tiene tres bloques: encabezado
+     fijo arriba, el contenido principal y navegación fija abajo.-->
 <body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen">
+  <!--SECCIÓN 1 - ENCABEZADO FIJO (barra superior)
+     Marca a la izquierda; notificaciones y perfil a la derecha.
+     Se mantiene visible al hacer scroll. pt-safe respeta el notch.-->
 <header class="fixed top-0 w-full z-50 pt-safe h-[calc(4rem+env(safe-area-inset-top,0px))] px-margin flex items-center justify-between gap-space-sm bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
 <p class="flex items-center gap-space-sm min-w-0">
 <img alt="Portal Académico Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W7XncRTv_MWlwveEwRB8C_GcCmX4b3LC-qfHXt4zeWl0roLdwRmpf77dZm2qpiF776vo__bRG8OlJ1nRNfccotIkSC8XN_SNwODsfGwWbrgXepz53c29yM5M9sh6IrZiRLsWAHK3JeBGbn0FHEI3u8fibRkF8MhN32MOsQjCzOKLRMrg0EpkhO5prFV7wDr4_bnERgpbWLj6xX2vYuu3Nurkb1oJV1swwofwF0qJE5Mg"/>
 <span class="flex flex-col min-w-0"><span class="font-title-lg text-title-lg text-primary truncate leading-tight">Portal Académico</span><span class="font-label-sm text-label-sm text-secondary truncate">Fichas</span></span>
 </p>
+  <!-- Acciones del usuario. menu es la etiqueta semántica para una barra de acciones; cada botón va en un li -->
 <menu class="flex items-center gap-space-xs flex-shrink-0">
 <li><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[22px]" aria-hidden="true">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface" aria-hidden="true"></span></button></li>
 <li><button aria-label="Perfil de usuario" class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full ring-1 ring-outline-variant hover:ring-secondary transition-all"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk98Erfkp1cw-jicXoC6MjkQIxhu-eHrSsn03Kpbifly75ZRQjOqL3AwbCqKvd3G-QlAWPioGQc3PEJcQUB7HE0WNohzYx_8FgVXBh9ZW6CFkueJJ__wWoOnHCSGyDT87QemumqVRHh1rR2QPqv1yzPaGIid6fnfECS73dHMFD0Doqh_BgbY1yIfcmY8SzUmrD52PH90yn9Khqa1tLEwtgQMm8JerMHjPCwxe_dFpf"/></button></li>
 </menu>
 </header>
-
-<!-- El div contenedor se fusionó con main -->
+<!--CONTENIDO PRINCIPAL (solo debe haber un main)
+     pt-16 deja espacio para el encabezado fijo; pb-24 para la
+     navegación fija de abajo. space-y separa los bloques entre sí.-->
 <main class="flex-1 flex flex-col relative w-full pt-16 pb-24 px-margin space-y-space-lg bg-surface">
 
-<!-- Search & Create Action Top Bar -->
-<!--Creado de fichas-->
+<!--SECCIÓN 2 - TÍTULO, BÚSQUEDA Y FILTROS
+     Título de la página con el botón de crear, buscador y chips.-->
 <section class="flex flex-col space-y-space-sm pt-space-sm">
+  <!-- Título de la página (h1) y botón para crear una nueva ficha. hgroup agrupa la etiqueta superior con el título -->
 <header class="flex items-center justify-between gap-space-sm">
 <hgroup class="flex flex-col">
 <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Coordinación Académica</p>
@@ -55,15 +71,13 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </hgroup>
 <button aria-label="Crear Nueva Ficha" class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm active:scale-95 transition-transform" id="btnCreateFicha"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">add_circle</span><span class="whitespace-nowrap">Nueva Ficha</span></button>
 </header>
-<!-- Search Input -->
-<!--Sistema de busqueda de fichas-->
+<!-- Buscador de fichas. La etiqueta search es la semántica para una zona de búsqueda. El input no tiene label visible, por eso usa aria-label. El script del final filtra las tarjetas mientras se escribe -->
 <search class="relative w-full">
 <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline"><span class="material-symbols-outlined text-[20px]" aria-hidden="true">search</span></span>
 <input class="w-full h-11 pl-10 pr-10 rounded-xl bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="inputSearchFichas" placeholder="Buscar por ficha o programa (ej. 2670182 o ADSO)..." type="search" aria-label="Buscar fichas"/>
 <button aria-label="Limpiar búsqueda" class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">tune</span></button>
 </search>
-<!-- Horizontal Scrolling Filter Chips -->
-<!--Barra horizontal de busqueda-->
+<!-- Chips de filtro con scroll horizontal. Cada chip es un li con un button; el script marca el activo (clase "active" y fondo verde) -->
 <ul class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-0.5 no-scrollbar -mx-margin px-margin">
 <li class="shrink-0"><button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap active bg-primary text-on-primary shadow-sm"><span>Todas (48)</span></button></li>
 <li class="shrink-0"><button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container"><span class="material-symbols-outlined text-[15px]" aria-hidden="true">meeting_room</span><span>Presencial</span></button></li>
@@ -73,8 +87,9 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 <li class="shrink-0"><button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container"><span class="material-symbols-outlined text-[15px]" aria-hidden="true">apartment</span><span>Sedes</span></button></li>
 </ul>
 </section>
-
-<!-- KPI Bento Summary Banner (el div interno z-10 era innecesario y se fusionó) -->
+<!--SECCIÓN 3 - RESUMEN DE INDICADORES (KPI)
+     Banner verde con tres tarjetas: fichas activas, aprendices y
+     jornadas. Cada tarjeta es un li dentro de una lista.-->
 <section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-primary p-space-md text-on-primary shadow-md flex flex-col space-y-space-md">
 <header class="flex items-center justify-between">
 <h2 class="flex items-center gap-2 font-label-lg text-label-lg text-primary-fixed"><span class="w-7 h-7 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center backdrop-blur-sm"><span class="material-symbols-outlined text-[18px] text-secondary-fixed" aria-hidden="true">monitoring</span></span>Panorama Formativo Activo</h2>
@@ -101,16 +116,19 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </li>
 </ul>
 </section>
-
-<!-- Section Header -->
+<!--SECCIÓN 4 - ENCABEZADO DEL LISTADO
+     Título "Grupos Formativos", contador de tarjetas visibles y
+     botón para ordenar.-->
 <header class="flex items-center justify-between pt-1">
 <h2 class="flex items-center gap-2"><span class="font-title-lg text-title-lg text-on-surface">Grupos Formativos</span><span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-bold">3 en pantalla</span></h2>
 <button aria-label="Ordenar fichas" class="p-1 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[18px]" aria-hidden="true">sort</span></button>
 </header>
-
-<!-- Cards Container -->
+<!--SECCIÓN 5 - LISTADO DE FICHAS
+     Un article por ficha (contenido independiente). Todas tienen la
+     misma estructura: encabezado, sede, instructor y matriculados,
+     progreso y acciones rápidas.-->
 <section aria-label="Listado de fichas" class="flex flex-col space-y-space-md">
-<!-- Ficha 2670182 -->
+<!-- Ficha 2670182 - ADSO, jornada diurna, en ejecución -->
 <article class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
 <header class="flex items-start justify-between gap-space-sm mb-space-xs">
 <hgroup class="flex flex-col min-w-0">
@@ -122,9 +140,9 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </hgroup>
 <span class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary" aria-hidden="true"></span>En Ejecución</span>
 </header>
-<!-- Sede -->
+<!-- Sede donde se imparte la ficha; el texto se corta con "..." si es muy largo (truncate) -->
 <p class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mb-space-md"><span class="material-symbols-outlined text-[16px] text-outline" aria-hidden="true">location_on</span><span class="truncate">Sede Centro de Servicios y Tecnologías</span></p>
-<!-- Instructor y tamaño del grupo -->
+<!-- Instructor líder (con avatar de iniciales) y cantidad de aprendices matriculados, en una lista de dos columnas -->
 <ul class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-low mb-space-md">
 <li class="flex items-center gap-2 min-w-0 p-1">
 <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">LG</span>
@@ -135,12 +153,12 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 <span class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-[17px]" aria-hidden="true">groups</span></span>
 </li>
 </ul>
-<!-- Progreso -->
+<!-- Avance de la formación. progress es la etiqueta nativa para barras de progreso; value es el porcentaje y aria-label lo identifica -->
 <p class="flex flex-col space-y-1.5 mb-space-md">
 <span class="flex items-center justify-between text-body-sm font-body-sm"><span class="text-on-surface-variant font-medium">Trimestre IV de VI</span><span class="font-label-md text-label-md text-secondary font-bold">65% Avanzado</span></span>
 <progress class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-secondary [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-secondary [&::-moz-progress-bar]:rounded-full" value="65" max="100" aria-label="Avance de la ficha 2670182">65%</progress>
 </p>
-<!-- Acciones rápidas -->
+<!-- Pie de la tarjeta: botones de acción rápida. El script les da un pequeño efecto al tocarlos -->
 <footer class="pt-space-xs flex items-center justify-between gap-1">
 <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Ver lista de aprendices"><span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">assignment_ind</span><span class="font-label-sm text-[10px] mt-0.5">Aprendices</span></button>
 <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Tomar lista o registrar inasistencias"><span class="material-symbols-outlined text-[20px] text-error" aria-hidden="true">event_available</span><span class="font-label-sm text-[10px] mt-0.5">Asistencia</span></button>
@@ -148,7 +166,7 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 <button aria-label="Más opciones de ficha" class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors" title="Editar o finalizar ficha"><span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_vert</span><span class="font-label-sm text-[10px] mt-0.5">Opciones</span></button>
 </footer>
 </article>
-<!-- Ficha 2589314 -->
+<!-- Ficha 2589314 - Redes y Telecomunicaciones, jornada mixta, etapa productiva -->
 <article class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
 <header class="flex items-start justify-between gap-space-sm mb-space-xs">
 <hgroup class="flex flex-col min-w-0">
@@ -160,9 +178,9 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </hgroup>
 <span class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-surface-tint" aria-hidden="true"></span>Etapa Productiva</span>
 </header>
-<!-- Sede -->
+<!-- Sede donde se imparte la ficha; el texto se corta con "..." si es muy largo (truncate) -->
 <p class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mb-space-md"><span class="material-symbols-outlined text-[16px] text-outline" aria-hidden="true">location_on</span><span class="truncate">Sede Metalmecánica e Industrial</span></p>
-<!-- Instructor y tamaño del grupo -->
+<!-- Instructor líder (con avatar de iniciales) y cantidad de aprendices matriculados, en una lista de dos columnas -->
 <ul class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-low mb-space-md">
 <li class="flex items-center gap-2 min-w-0 p-1">
 <span class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">MM</span>
@@ -173,12 +191,12 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 <span class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-[17px]" aria-hidden="true">groups</span></span>
 </li>
 </ul>
-<!-- Progreso -->
+<!-- Avance de la formación. progress es la etiqueta nativa para barras de progreso; value es el porcentaje y aria-label lo identifica -->
 <p class="flex flex-col space-y-1.5 mb-space-md">
 <span class="flex items-center justify-between text-body-sm font-body-sm"><span class="text-on-surface-variant font-medium">Contrato de Aprendizaje / Pasantía</span><span class="font-label-md text-label-md text-primary font-bold">88% Final</span></span>
 <progress class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-surface-tint [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-surface-tint [&::-moz-progress-bar]:rounded-full" value="88" max="100" aria-label="Avance de la ficha 2589314">88%</progress>
 </p>
-<!-- Acciones rápidas -->
+<!-- Pie de la tarjeta: botones de acción rápida. El script les da un pequeño efecto al tocarlos -->
 <footer class="pt-space-xs flex items-center justify-between gap-1">
 <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Ver lista de aprendices"><span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">assignment_ind</span><span class="font-label-sm text-[10px] mt-0.5">Aprendices</span></button>
 <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Bitácoras y seguimientos"><span class="material-symbols-outlined text-[20px] text-surface-tint" aria-hidden="true">fact_check</span><span class="font-label-sm text-[10px] mt-0.5">Bitácoras</span></button>
@@ -186,7 +204,7 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 <button aria-label="Más opciones de ficha" class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors" title="Editar o certificar ficha"><span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_vert</span><span class="font-label-sm text-[10px] mt-0.5">Opciones</span></button>
 </footer>
 </article>
-<!-- Ficha 2710405 -->
+<!-- Ficha 2710405 - Gestión Administrativa, jornada nocturna, en ejecución -->
 <article class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
 <header class="flex items-start justify-between gap-space-sm mb-space-xs">
 <hgroup class="flex flex-col min-w-0">
@@ -198,9 +216,9 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </hgroup>
 <span class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary" aria-hidden="true"></span>En Ejecución</span>
 </header>
-<!-- Sede -->
+<!-- Sede donde se imparte la ficha; el texto se corta con "..." si es muy largo (truncate) -->
 <p class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mb-space-md"><span class="material-symbols-outlined text-[16px] text-outline" aria-hidden="true">location_on</span><span class="truncate">Sede Central - Comercio y Gestión</span></p>
-<!-- Instructor y tamaño del grupo -->
+<!-- Instructor líder (con avatar de iniciales) y cantidad de aprendices matriculados, en una lista de dos columnas -->
 <ul class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-low mb-space-md">
 <li class="flex items-center gap-2 min-w-0 p-1">
 <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">SP</span>
@@ -211,12 +229,12 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 <span class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-[17px]" aria-hidden="true">groups</span></span>
 </li>
 </ul>
-<!-- Progreso -->
+<!-- Avance de la formación. progress es la etiqueta nativa para barras de progreso; value es el porcentaje y aria-label lo identifica -->
 <p class="flex flex-col space-y-1.5 mb-space-md">
 <span class="flex items-center justify-between text-body-sm font-body-sm"><span class="text-on-surface-variant font-medium">Trimestre II de VI</span><span class="font-label-md text-label-md text-secondary font-bold">30% Avanzado</span></span>
 <progress class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-secondary [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-secondary [&::-moz-progress-bar]:rounded-full" value="30" max="100" aria-label="Avance de la ficha 2710405">30%</progress>
 </p>
-<!-- Acciones rápidas -->
+<!-- Pie de la tarjeta: botones de acción rápida. El script les da un pequeño efecto al tocarlos -->
 <footer class="pt-space-xs flex items-center justify-between gap-1">
 <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Ver lista de aprendices"><span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">assignment_ind</span><span class="font-label-sm text-[10px] mt-0.5">Aprendices</span></button>
 <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Tomar lista o registrar inasistencias"><span class="material-symbols-outlined text-[20px] text-error" aria-hidden="true">event_available</span><span class="font-label-sm text-[10px] mt-0.5">Asistencia</span></button>
@@ -225,8 +243,9 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </footer>
 </article>
 </section>
-
-<!-- Educational Community & Support Card -->
+<!--SECCIÓN 6 - AVISO DE AUDITORÍA
+     aside es contenido complementario: no es parte del listado.
+     Recuerda exportar reportes de asistencia o validar cupos.-->
 <aside class="rounded-xl bg-surface-container p-space-md flex items-center gap-space-md">
 <span class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0"><span class="material-symbols-outlined text-[26px]" aria-hidden="true">school</span></span>
 <hgroup class="flex flex-col min-w-0">
@@ -237,7 +256,10 @@ fontSize: {"body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-
 </aside>
 </main>
 
-<!-- El div interno de la nav pasó a ser una lista -->
+<!--SECCIÓN 7 - NAVEGACIÓN INFERIOR (fija abajo)
+     Menú principal con cinco destinos. La pestaña actual (Fichas)
+     tiene aria-current="page" y color distinto. Los href="#" son
+     marcadores: en producción deben apuntar a cada página real.-->
 <nav aria-label="Navegación principal" class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-secondary">
 <ul class="flex items-center justify-around h-16 px-space-xs">
 <li><a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface" data-path="usuarios" href="#"><span class="material-symbols-outlined text-[22px]" aria-hidden="true">group</span><span class="font-label-sm text-label-sm mt-0.5">Usuarios</span></a></li>
