@@ -22,7 +22,7 @@ Orledys Paola Garcia Rodriguez
 18 Consulta de comunicados
 19 Notificaciones
 20 Desplegar la aplicacion
-Luisa Fernanda Sanchez
+Sebastian Carvjal
 21 Registro de justificaciones
 22 Carga de archivos de soporte
 23 Gestión y seguimiento de novedades
