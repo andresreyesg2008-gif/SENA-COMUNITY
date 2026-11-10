@@ -57,13 +57,46 @@
     }
   </style>
   </head>
-  <body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Gestión Operativa Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UbFTQl8D-f2bXf_jX9l7xZk-suWp3Pf2ugowxUq8q2BcXybcgAd1hPU4wOcYuMgZTEt-PHEDvOTsmhwCoFtlaqaks99p8dMLqd0-BWOcOwR7Xocnlu8GuBF7zIgyt0fGSumMyitOTAZp9hVNwXxzVzKr0jngtvU62wFSAOFOZ7pojERK2kEUNKS5sjC2pGBraOO0xmPx18fSG4v5lAU3DTFY672dX4nYcHrrRYJmg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">Gestión Operativa</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Historial</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center justify-center p-0.5 rounded-full hover:bg-surface-container transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpJjhmZlQxd4DCHsauGsc-DlfZOkeBSsMHkkgMdCxqzRftQM9WJNTJO5fBiLN9lYzcHKpg63vjWM39cQl3R2oGJGeVDDwA-KWrZPJNuWAZ3qrnvKN_ULlcRHVbG3MwgJ_weF8HzCC6z2tFxsfxUTefW97iPbGW4L-wOliorhS2JouWyyVpY7_Z1gZqF3QnkqzkrEjPPAWTaej6FAiKi4rclQbH4JD7RsLTFU7DPw"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface px-margin-mobile"><div class="flex flex-col w-full space-y-space-md pb-6">
+  <body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container">
+    <header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      <div class="h-16 px-margin-mobile flex items-center justify-between">
+        <div class="flex items-center gap-space-xs">
+          <img alt="Gestión Operativa Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UbFTQl8D-f2bXf_jX9l7xZk-suWp3Pf2ugowxUq8q2BcXybcgAd1hPU4wOcYuMgZTEt-PHEDvOTsmhwCoFtlaqaks99p8dMLqd0-BWOcOwR7Xocnlu8GuBF7zIgyt0fGSumMyitOTAZp9hVNwXxzVzKr0jngtvU62wFSAOFOZ7pojERK2kEUNKS5sjC2pGBraOO0xmPx18fSG4v5lAU3DTFY672dX4nYcHrrRYJmg"/>
+          <div class="flex flex-col ml-space-xs">
+            <span class="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">Gestión Operativa
+
+            </span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Historial
+
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs">
+            <button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors relative">
+              <span class="material-symbols-outlined text-[22px]">notifications
+
+              </span>
+              <span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface">
+
+              </span>
+            </button>
+            <div class="flex items-center justify-center p-0.5 rounded-full hover:bg-surface-container transition-colors">
+              <img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpJjhmZlQxd4DCHsauGsc-DlfZOkeBSsMHkkgMdCxqzRftQM9WJNTJO5fBiLN9lYzcHKpg63vjWM39cQl3R2oGJGeVDDwA-KWrZPJNuWAZ3qrnvKN_ULlcRHVbG3MwgJ_weF8HzCC6z2tFxsfxUTefW97iPbGW4L-wOliorhS2JouWyyVpY7_Z1gZqF3QnkqzkrEjPPAWTaej6FAiKi4rclQbH4JD7RsLTFU7DPw"/>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface px-margin-mobile">
+        <div class="flex flex-col w-full space-y-space-md pb-6">
 <!-- Micro Sync & Live Status Bar -->
 <div class="flex items-center justify-between px-space-xs py-1">
 <div class="flex items-center gap-1.5">
 <span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75">
+
+</span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary">
+
+</span>
 </span>
 <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
         Sincronizado hace 2 min
