@@ -3,14 +3,12 @@
 <!-- Raíz del documento. lang="es" indica el idioma a lectores de pantalla,
      traductores y buscadores -->
 <html lang="es">
-
 <head>
   <!-- Codificación de caracteres: necesaria para tildes y la ñ -->
   <meta charset="utf-8" />
   <!-- Diseño móvil: ajusta el ancho al dispositivo, bloquea el zoom y usa
        toda la pantalla (viewport-fit=cover para pantallas con notch) -->
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-    name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
   <!-- Metadato propio de la plataforma de diseño; no afecta al navegador -->
   <meta content="mobile_blank" name="shell-type" />
   <!-- Título que aparece en la pestaña del navegador -->
@@ -24,9 +22,7 @@
   <!-- Inter: tipografía del texto (pesos 400 a 700) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <!-- Material Symbols: fuente de íconos (candado, ojo, flecha, etc.) -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
   <!--CSS base-->
   <style>
     @layer base {
@@ -171,18 +167,15 @@
       <!-- Logo dentro de una insignia cuadrada. <figure> agrupa la imagen.
            El alt describe el logo para lectores de pantalla y se muestra
            si la imagen no carga -->
-      <figure
-        class="relative flex items-center justify-center w-20 h-20 rounded-xl bg-surface-container-lowest border border-surface-container-high shadow-sm mb-space-md">
+      <figure class="relative flex items-center justify-center w-20 h-20 rounded-xl bg-surface-container-lowest border border-surface-container-high shadow-sm mb-space-md">
         <!--src es la ruta de la imagen y alt es su texto alternativo
   alt es importante por q es el encargado de leer las imagenes, mostrar el texto de estas en caso de que 
   la imagen no cargue-->
-        <img alt="Logo Comunicados Institucionales" class="w-14 h-14 object-contain rounded-lg"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1X4QekWYBDKtDisp-fyb6_yMEXhjExyO3HcVLMtezfQ84f71MuINlQVa4P6Q2Vmd-zbW5u4G4v1sA2gJ7bYoOfupsuo3LvUKgz_BpJhAAhB4ivD-2oNQlYtHGDKy2P-TkA9PHMd_nqQJ5dKDzV5qbLqn75GS4kNMbBIyf6cD6JihPFXiw6WvfFrW1zNsrf0R-BZdQ7baBBDm8MGn9Emcu5TYWisVh164azcqLgbWKq76Q" />
+        <img alt="Logo Comunicados Institucionales" class="w-14 h-14 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1X4QekWYBDKtDisp-fyb6_yMEXhjExyO3HcVLMtezfQ84f71MuINlQVa4P6Q2Vmd-zbW5u4G4v1sA2gJ7bYoOfupsuo3LvUKgz_BpJhAAhB4ivD-2oNQlYtHGDKy2P-TkA9PHMd_nqQJ5dKDzV5qbLqn75GS4kNMbBIyf6cD6JihPFXiw6WvfFrW1zNsrf0R-BZdQ7baBBDm8MGn9Emcu5TYWisVh164azcqLgbWKq76Q" />
       </figure>
       <!-- Jerarquía de títulos: etiqueta superior, h1 y descripción -->
       <p class="font-label text-xs font-semibold text-secondary uppercase tracking-wider mb-space-xs">
-        Servicio de
-        Autenticación Central</p>
+        Servicio de Autenticación Central</p>
       <h1 class="font-headline text-2xl font-bold text-on-surface tracking-tight">
         Portal de Comunicados
       </h1>
@@ -193,8 +186,7 @@
     <!--SECCIÓN 2 - TARJETA DE INICIO DE SESIÓN
     Contiene el formulario de acceso, un separador y el acceso por SSO.
     aria-label da nombre a la sección para lectores de pantalla-->
-    <section aria-label="Inicio de sesión"
-      class="flex flex-col w-full bg-surface-container-lowest rounded-xl border border-surface-container shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] p-5 mt-space-xs">
+    <section aria-label="Inicio de sesión" class="flex flex-col w-full bg-surface-container-lowest rounded-xl border border-surface-container shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] p-5 mt-space-xs">
       <!--2.1 FORMULARIO
      onsubmit con preventDefault() bloquea el envío real: es una
      maqueta, por eso no tiene action ni method-->
@@ -216,14 +208,10 @@
           </label>
           <span class="relative flex items-center">
             <!-- Ícono decorativo, posicionado dentro del campo -->
-            <span
-              class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none"
-              aria-hidden="true">
+            <span class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none" aria-hidden="true">
               alternate_email
             </span>
-            <input autocomplete="username"
-              class="w-full h-12 pl-11 pr-3 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all"
-              id="username-input" name="username" placeholder="usuario@institucion.edu" required="" type="text" />
+            <input autocomplete="username" class="w-full h-12 pl-11 pr-3 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all" id="username-input" name="username" placeholder="usuario@institucion.edu" required="" type="text" />
           </span>
         </p>
         <!-- Campo 2: contraseña.
@@ -235,20 +223,14 @@
             Contraseña
           </label>
           <span class="relative flex items-center">
-            <span
-              class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none"
-              aria-hidden="true">
+            <span class="material-symbols-outlined text-[20px] absolute left-3.5 text-outline pointer-events-none select-none" aria-hidden="true">
               lock
             </span>
-            <input autocomplete="current-password"
-              class="w-full h-12 pl-11 pr-11 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all"
-              id="password-input" name="password" placeholder="••••••••••••" required="" type="password" />
+            <input autocomplete="current-password" class="w-full h-12 pl-11 pr-11 rounded-lg bg-surface-container-low border border-surface-container-high text-on-surface font-body text-sm placeholder:text-outline/70 focus:bg-surface-container-lowest focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all" id="password-input" name="password" placeholder="••••••••••••" required="" type="password" />
             <!-- type="button" evita que envíe el formulario. aria-label es
                  necesario porque solo tiene ícono y no texto -->
             <!--type="button" evita que el botón envíe el formulario. Sin eso, dentro de un <form> actuaría como submit.-->
-            <button aria-label="Alternar visibilidad de contraseña"
-              class="absolute right-1 w-10 h-10 flex items-center justify-center text-outline hover:text-on-surface transition-colors rounded-full"
-              id="toggle-password-btn" type="button">
+            <button aria-label="Alternar visibilidad de contraseña" class="absolute right-1 w-10 h-10 flex items-center justify-center text-outline hover:text-on-surface transition-colors rounded-full" id="toggle-password-btn" type="button">
               <span class="material-symbols-outlined text-[20px]" id="password-eye-icon" aria-hidden="true">
                 visibility
               </span>
@@ -264,12 +246,8 @@
                el ícono de check aparezca solo cuando está marcada -->
           <label class="flex items-center gap-2 cursor-pointer select-none py-1">
             <span class="relative flex items-center justify-center w-5 h-5">
-              <input
-                class="peer appearance-none w-5 h-5 rounded border border-surface-container-highest bg-surface-container-low checked:bg-primary-container checked:border-primary-container cursor-pointer transition-colors"
-                id="remember-session" name="remember" type="checkbox" />
-              <span
-                class="material-symbols-outlined absolute text-[16px] text-white opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity font-bold"
-                aria-hidden="true">
+              <input class="peer appearance-none w-5 h-5 rounded border border-surface-container-highest bg-surface-container-low checked:bg-primary-container checked:border-primary-container cursor-pointer transition-colors" id="remember-session" name="remember" type="checkbox" />
+              <span class="material-symbols-outlined absolute text-[16px] text-white opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity font-bold" aria-hidden="true">
                 check
               </span>
             </span>
@@ -286,9 +264,7 @@
         </div>
 
         <!-- Botón principal. type="submit" envía el formulario -->
-        <button
-          class="w-full h-12 mt-1 rounded-lg bg-primary-container text-white font-label text-sm font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container/90 active:scale-[0.99] transition-all"
-          id="btn-login-submit" type="submit">
+        <button class="w-full h-12 mt-1 rounded-lg bg-primary-container text-white font-label text-sm font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container/90 active:scale-[0.99] transition-all" id="btn-login-submit" type="submit">
           <span>
             Iniciar Sesión
           </span>
@@ -302,17 +278,15 @@
            Sin divs: las dos líneas laterales son pseudo-elementos
            (before y after) de Tailwind.
            --------------------------------------------------------------- -->
-      <p
-        class="my-4 flex items-center gap-3 font-label text-xs font-semibold text-outline uppercase tracking-wider before:h-px before:flex-1 before:bg-surface-container after:h-px after:flex-1 after:bg-surface-container">
-        o</p>
+      <p class="my-4 flex items-center gap-3 font-label text-xs font-semibold text-outline uppercase tracking-wider before:h-px before:flex-1 before:bg-surface-container after:h-px after:flex-1 after:bg-surface-container">
+        o
+      </p>
       <!-- ---------------------------------------------------------------
            2.3 ACCESO ALTERNATIVO (SSO / Directorio Activo)
            type="button" porque no envía el formulario; su comportamiento
            se define en el script del final.
            --------------------------------------------------------------- -->
-      <button
-        class="w-full h-12 rounded-lg bg-surface-container-low border border-surface-container hover:bg-surface-container text-secondary font-label text-sm font-semibold flex items-center justify-center gap-2.5 active:scale-[0.99] transition-all"
-        id="btn-sso-login" type="button">
+      <button class="w-full h-12 rounded-lg bg-surface-container-low border border-surface-container hover:bg-surface-container text-secondary font-label text-sm font-semibold flex items-center justify-center gap-2.5 active:scale-[0.99] transition-all" id="btn-sso-login" type="button">
         <span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">
           vpn_key
         </span>
@@ -324,8 +298,7 @@
     <!--SECCIÓN 3 - PIE: SEGURIDAD Y SOPORTE
      Nota de conexión cifrada y contacto de la mesa de ayuda.-->
     <footer class="mt-6 flex flex-col items-center gap-2 text-center">
-      <p
-        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container text-on-surface-variant">
+      <p class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container text-on-surface-variant">
         <span class="material-symbols-outlined text-primary-container text-[16px]" aria-hidden="true">
           verified_user
         </span>
@@ -337,8 +310,10 @@
            dirección ya escrita -->
       <p class="font-body text-xs text-outline max-w-xs mt-1 leading-relaxed">
         <!--"href="mailto:soporte@institucion.edu" Ese abre el programa de correo con la dirección ya escrita.-->
-        ¿Problemas de ingreso? Contacta a la Mesa de Ayuda TI en <a class="text-secondary font-semibold hover:underline"
-          href="mailto:soporte@institucion.edu">soporte@institucion.edu</a>
+        ¿Problemas de ingreso? Contacta a la Mesa de Ayuda TI en 
+        <a class="text-secondary font-semibold hover:underline"href="mailto:soporte@institucion.edu">
+          soporte@institucion.edu
+        </a>
       </p>
     </footer>
   </main>

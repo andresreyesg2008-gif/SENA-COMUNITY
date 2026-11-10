@@ -43,7 +43,8 @@
   </style>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
   </script>
-  <script id="tailwind-config">tailwind.config = {
+  <script id="tailwind-config">
+  tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
@@ -111,7 +112,7 @@
         }
       }
     };
-    </script>
+  </script>
   <style>
     body {
       min-height: max(884px, 100dvh);
@@ -119,7 +120,6 @@
     }
   </style>
 </head>
-
 <body class="bg-surface font-body text-on-surface flex flex-col min-h-screen">
   <header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-16 px-4 flex items-center justify-between">
@@ -181,10 +181,7 @@
                 account_circle
               </span>
             </div>
-            <button aria-label="Cambiar fotografía"
-              class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-90 transition-transform hover:bg-primary/90"
-              id="quickUploadTrigger" type="button"
-              style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
+            <button aria-label="Cambiar fotografía" class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-90 transition-transform hover:bg-primary/90" id="quickUploadTrigger" type="button" style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
               <span class="material-symbols-outlined text-[18px]">
                 photo_camera
               </span>
@@ -195,8 +192,7 @@
               Fotografía Oficial
             </span>
             <p class="text-xs text-on-surface-variant mt-0.5">
-              Retrato formal de frente con fondo claro para credencial y
-              vocería.
+              Retrato formal de frente con fondo claro para credencial y vocería.
             </p>
             <div class="flex items-center gap-2 mt-2">
               <button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high text-xs font-semibold flex items-center gap-1 active:scale-95 transition-all border border-outline-variant/40" onclick="triggerPhotoMock('camara')" type="button">
@@ -222,8 +218,7 @@
       <!-- Form Fields -->
       <form class="flex flex-col gap-4 px-4 py-2" id="registroForm" onsubmit="event.preventDefault();">
         <!-- Bloque Identidad Personal -->
-        <div
-          class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2 border border-outline-variant/30">
+        <div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2 border border-outline-variant/30">
           <div class="flex items-center gap-2 pb-1">
             <span class="material-symbols-outlined text-primary text-[20px]" style="color: rgb(34, 109, 0);">
               badge
@@ -234,245 +229,295 @@
           </div>
           <!-- Nombre Completo -->
           <div class="flex flex-col gap-1">
-            <label class="text-xs font-medium text-on-surface-variant" for="fullName">Nombres y Apellidos Completos
+            <label class="text-xs font-medium text-on-surface-variant" for="fullName">
+              Nombres y Apellidos Completos
               *</label>
             <div class="relative flex items-center">
-              <input
-                class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all pr-10 border border-outline-variant/40"
-                id="fullName" placeholder="ej. Dra. Elena Rostova Valdés" required="" type="text">
-              <span
-                class="material-symbols-outlined absolute right-3 text-outline text-[20px] pointer-events-none">person</span>
+              <input class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all pr-10 border border-outline-variant/40" id="fullName" placeholder="ej. Dra. Elena Rostova Valdés" required="" type="text">
+              <span class="material-symbols-outlined absolute right-3 text-outline text-[20px] pointer-events-none">
+                person
+              </span>
             </div>
           </div>
           <!-- Grid: Documento & Fecha Nacimiento -->
           <div class="grid grid-cols-2 gap-2">
             <div class="flex flex-col gap-1 min-w-0">
-              <label class="text-xs font-medium text-on-surface-variant truncate" for="idDoc">Cédula / Pasaporte
+              <label class="text-xs font-medium text-on-surface-variant truncate" for="idDoc">
+                Cédula / Pasaporte
                 *</label>
               <div class="relative flex items-center">
-                <input
-                  class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40"
-                  id="idDoc" placeholder="110482910-K" required="" type="text">
+                <input class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40" id="idDoc" placeholder="110482910-K" required="" type="text">
               </div>
             </div>
             <div class="flex flex-col gap-1 min-w-0">
-              <label class="text-xs font-medium text-on-surface-variant truncate" for="birthDate">Fecha Nacimiento
+              <label class="text-xs font-medium text-on-surface-variant truncate" for="birthDate">
+                Fecha Nacimiento
                 *</label>
               <div class="relative flex items-center">
-                <input
-                  class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40"
-                  id="birthDate" required="" type="date" value="1992-05-14">
+                <inputclass="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40" id="birthDate" required="" type="date" value="1992-05-14">
               </div>
             </div>
           </div>
           <!-- Correo Institucional -->
           <div class="flex flex-col gap-1">
-            <label class="text-xs font-medium text-on-surface-variant" for="email">Correo Institucional *</label>
+            <label class="text-xs font-medium text-on-surface-variant" for="email">
+              Correo Institucional *
+            </label>
             <div class="relative flex items-center">
-              <input
-                class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all pr-10 border border-outline-variant/40"
-                id="email" placeholder="elena.rostova@sgi-voceria.org" required="" type="email">
-              <span
-                class="material-symbols-outlined absolute right-3 text-outline text-[20px] pointer-events-none">mail</span>
+              <input class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all pr-10 border border-outline-variant/40" id="email" placeholder="elena.rostova@sgi-voceria.org" required="" type="email">
+              <span class="material-symbols-outlined absolute right-3 text-outline text-[20px] pointer-events-none">
+                mail
+              </span>
             </div>
           </div>
           <!-- Teléfono de Contacto -->
           <div class="flex flex-col gap-1">
-            <label class="text-xs font-medium text-on-surface-variant" for="phone">Teléfono de Contacto Directo
+            <label class="text-xs font-medium text-on-surface-variant" for="phone">
+              Teléfono de Contacto Directo
               *</label>
             <div class="relative flex items-center">
-              <span class="absolute left-3 text-xs font-semibold text-on-surface-variant">+56 9</span>
-              <input
-                class="w-full h-12 pl-16 pr-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40"
-                id="phone" placeholder="8472 9012" required="" type="tel">
-              <span
-                class="material-symbols-outlined absolute right-3 text-outline text-[20px] pointer-events-none">phone_iphone</span>
+              <span class="absolute left-3 text-xs font-semibold text-on-surface-variant">
+                +56 9
+              </span>
+              <input class="w-full h-12 pl-16 pr-4 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40" id="phone" placeholder="8472 9012" required="" type="tel">
+              <span class="material-symbols-outlined absolute right-3 text-outline text-[20px] pointer-events-none">
+                phone_iphone
+              </span>
             </div>
           </div>
         </div>
         <!-- Bloque Estructura y Mesa de Trabajo -->
-        <div
-          class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2 border border-outline-variant/30">
+        <div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2 border border-outline-variant/30">
           <div class="flex items-center gap-2 pb-1">
-            <span class="material-symbols-outlined text-primary text-[20px]"
-              style="color: rgb(34, 109, 0);">corporate_fare</span>
-            <h3 class="text-sm font-semibold text-on-surface uppercase tracking-wide">Asignación Orgánica</h3>
+            <span class="material-symbols-outlined text-primary text-[20px]" style="color: rgb(34, 109, 0);">
+              corporate_fare
+            </span>
+            <h3 class="text-sm font-semibold text-on-surface uppercase tracking-wide">
+              Asignación Orgánica
+            </h3>
           </div>
           <!-- Región / Seccional -->
           <div class="flex flex-col gap-1">
-            <label class="text-xs font-medium text-on-surface-variant" for="regionSelect">Región / Seccional Territorial
+            <label class="text-xs font-medium text-on-surface-variant" for="regionSelect">
+              Región / Seccional Territorial
               *</label>
             <div class="relative flex items-center">
-              <select
-                class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface appearance-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40"
-                id="regionSelect">
-                <option value="metropolitana">Región Metropolitana - Coordinación Central</option>
-                <option value="valparaiso">Región Valparaíso - Costa Norte</option>
-                <option value="biobio">Región del Biobío - Distrito Sur</option>
-                <option value="antofagasta">Región Antofagasta - Distrito Minero</option>
-                <option value="araucania">Región de La Araucanía - Zona Sur</option>
+              <select class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface appearance-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40" id="regionSelect">
+                <option value="metropolitana">
+                  Región Metropolitana - Coordinación Central
+                </option>
+                <option value="valparaiso">
+                  Región Valparaíso - Costa Norte
+                </option>
+                <option value="biobio">
+                  Región del Biobío - Distrito Sur
+                </option>
+                <option value="antofagasta">
+                  Región Antofagasta - Distrito Minero
+                </option>
+                <option value="araucania">
+                  Región de La Araucanía - Zona Sur
+                </option>
               </select>
-              <span
-                class="material-symbols-outlined absolute right-3 text-on-surface-variant pointer-events-none text-[22px]">expand_more</span>
+              <span class="material-symbols-outlined absolute right-3 text-on-surface-variant pointer-events-none text-[22px]">
+                expand_more
+              </span>
             </div>
           </div>
           <!-- Comisión o Mesa -->
           <div class="flex flex-col gap-1">
-            <label class="text-xs font-medium text-on-surface-variant" for="comisionSelect">Comisión o Mesa de Trabajo
-              Asignada *</label>
+            <label class="text-xs font-medium text-on-surface-variant" for="comisionSelect">
+              Comisión o Mesa de Trabajo
+              Asignada *
+            </label>
             <div class="relative flex items-center">
-              <select
-                class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface appearance-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40"
-                id="comisionSelect">
-                <option value="politica">Mesa de Asuntos Públicos &amp; Gobernanza</option>
-                <option value="salud">Comisión de Políticas Sanitarias &amp; Salud</option>
-                <option value="economia">Comité Técnico de Economía &amp; Presupuesto</option>
-                <option value="innovacion">Mesa de Innovación y Transformación Digital</option>
-                <option value="derechos">Comisión de Derechos Ciudadanos &amp; Mediación</option>
+              <select class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-sm text-on-surface appearance-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all border border-outline-variant/40" id="comisionSelect">
+                <option value="politica">
+                  Mesa de Asuntos Públicos &amp; Gobernanza
+                </option>
+                <option value="salud">
+                  Comisión de Políticas Sanitarias &amp; Salud
+                </option>
+                <option value="economia">
+                  Comité Técnico de Economía &amp; Presupuesto
+                </option>
+                <option value="innovacion">
+                  Mesa de Innovación y Transformación Digital
+                </option>
+                <option value="derechos">
+                  Comisión de Derechos Ciudadanos &amp; Mediación
+                </option>
               </select>
-              <span
-                class="material-symbols-outlined absolute right-3 text-on-surface-variant pointer-events-none text-[22px]">hub</span>
+              <span class="material-symbols-outlined absolute right-3 text-on-surface-variant pointer-events-none text-[22px]">
+                hub
+              </span>
             </div>
           </div>
         </div>
         <!-- Bloque Vocería Oficial con Toggle -->
-        <div
-          class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2 border border-outline-variant/30 transition-all">
+        <div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2 border border-outline-variant/30 transition-all">
           <div class="flex items-start justify-between gap-4">
             <div class="flex flex-col min-w-0">
               <div class="flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-primary text-[22px]"
-                  style="color: rgb(34, 109, 0);">campaign</span>
-                <span class="text-lg font-semibold text-on-surface">Vocería Oficial</span>
+                <span class="material-symbols-outlined text-primary text-[22px]" style="color: rgb(34, 109, 0);">
+                  campaign
+                </span>
+                <span class="text-lg font-semibold text-on-surface">
+                  Vocería Oficial
+                </span>
               </div>
-              <p class="text-xs text-on-surface-variant mt-1">Habilitar postulación para emitir declaraciones públicas,
-                vocerías de prensa y representación institucional.</p>
+              <p class="text-xs text-on-surface-variant mt-1">
+                Habilitar postulación para emitir declaraciones públicas,
+                vocerías de prensa y representación institucional.
+              </p>
             </div>
             <!-- Custom Switch -->
             <label class="relative inline-flex items-center cursor-pointer flex-shrink-0 mt-1">
               <input class="sr-only peer" id="voceroToggle" onchange="toggleVoceroFields(this.checked)" type="checkbox">
-              <div
-                class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary">
+              <div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary">
               </div>
             </label>
           </div>
           <!-- Info Banner Tooltip Inline -->
-          <div
-            class="flex items-center gap-2 p-2 rounded-lg bg-primary-container/40 text-on-surface-variant border border-primary/10"
-            style="background-color: rgba(57, 169, 0, 0.12); border-color: rgba(57, 169, 0, 0.25);">
-            <span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0"
-              style="color: #226d00;">verified_user</span>
-            <span class="text-xs font-medium">Requiere ratificación del Comité de Comunicaciones en el Paso 2.</span>
+          <div class="flex items-center gap-2 p-2 rounded-lg bg-primary-container/40 text-on-surface-variant border border-primary/10" style="background-color: rgba(57, 169, 0, 0.12); border-color: rgba(57, 169, 0, 0.25);">
+            <span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0" style="color: #226d00;">
+              verified_user
+            </span>
+            <span class="text-xs font-medium">
+              Requiere ratificación del Comité de Comunicaciones en el Paso 2.
+            </span>
           </div>
           <!-- Sección Condicional Vocería -->
           <div class="hidden flex-col gap-2 pt-1 mt-1" id="voceroSection">
             <!-- Temas de Especialidad (Chips Interactivos) -->
             <div class="flex flex-col gap-1.5">
               <div class="flex items-center justify-between">
-                <label class="text-xs font-bold text-on-surface-variant">Áreas Temáticas de Vocería</label>
-                <span class="text-[10px] font-bold text-primary uppercase">Selecciona mín. 1</span>
+                <label class="text-xs font-bold text-on-surface-variant">
+                  Áreas Temáticas de Vocería
+                </label>
+                <span class="text-[10px] font-bold text-primary uppercase">
+                  Selecciona mín. 1
+                </span>
               </div>
               <div class="flex flex-wrap gap-1.5" id="topicChips">
-                <button
-                  class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant transition-colors flex items-center gap-1 active:scale-95 border border-outline-variant/40"
-                  data-selected="false" onclick="toggleChip(this)" type="button">
-                  <span class="">Salud Pública</span>
+                <button class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant transition-colors flex items-center gap-1 active:scale-95 border border-outline-variant/40" data-selected="false" onclick="toggleChip(this)" type="button">
+                  <span class="">
+                    Salud Pública
+                  </span>
                 </button>
-                <button
-                  class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary transition-colors flex items-center gap-1 active:scale-95 shadow-sm"
-                  data-selected="true" onclick="toggleChip(this)" type="button">
-                  <span class="material-symbols-outlined text-[14px]">check</span>
-                  <span class="">Economía y Hacienda</span>
+                <button class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary transition-colors flex items-center gap-1 active:scale-95 shadow-sm" data-selected="true" onclick="toggleChip(this)" type="button">
+                  <span class="material-symbols-outlined text-[14px]">
+                    check
+                  </span>
+                  <span class="">
+                    Economía y Hacienda
+                  </span>
                 </button>
-                <button
-                  class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary transition-colors flex items-center gap-1 active:scale-95 shadow-sm"
-                  data-selected="true" onclick="toggleChip(this)" type="button">
-                  <span class="material-symbols-outlined text-[14px]">check</span>
-                  <span class="">Marco Legal e Institucional</span>
+                <button class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary transition-colors flex items-center gap-1 active:scale-95 shadow-sm" data-selected="true" onclick="toggleChip(this)" type="button">
+                  <span class="material-symbols-outlined text-[14px]">
+                    check
+                  </span>
+                  <span class="">
+                    Marco Legal e Institucional
+                  </span>
                 </button>
-                <button
-                  class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant transition-colors flex items-center gap-1 active:scale-95 border border-outline-variant/40"
-                  data-selected="false" onclick="toggleChip(this)" type="button">
-                  <span class="">Medio Ambiente</span>
+                <button class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant transition-colors flex items-center gap-1 active:scale-95 border border-outline-variant/40" data-selected="false" onclick="toggleChip(this)" type="button">
+                  <span class="">
+                    Medio Ambiente
+                  </span>
                 </button>
-                <button
-                  class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant transition-colors flex items-center gap-1 active:scale-95 border border-outline-variant/40"
-                  data-selected="false" onclick="toggleChip(this)" type="button">
-                  <span class="">Educación y Cultura</span>
+                <button class="topic-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant transition-colors flex items-center gap-1 active:scale-95 border border-outline-variant/40" data-selected="false" onclick="toggleChip(this)" type="button">
+                  <span class="">
+                    Educación y Cultura
+                  </span>
                 </button>
               </div>
             </div>
             <!-- Disponibilidad para Medios -->
             <div class="flex flex-col gap-1 pt-1">
-              <label class="text-xs font-bold text-on-surface-variant">Nivel de Disponibilidad para Medios</label>
+              <label class="text-xs font-bold text-on-surface-variant">
+                Nivel de Disponibilidad para Medios
+              </label>
               <div class="grid grid-cols-3 gap-2">
-                <button
-                  class="disp-card p-2 rounded-lg bg-primary-container text-on-primary-container border border-primary/20 flex flex-col items-center justify-center text-center gap-1 active:scale-95 transition-all shadow-sm"
-                  data-active="true" onclick="selectDisponibilidad(this)" type="button">
-                  <span class="material-symbols-outlined text-[20px] text-primary"
-                    style="color: rgb(34, 109, 0);">bolt</span>
-                  <span class="text-xs font-bold">24/7 Urgencias</span>
+                <button class="disp-card p-2 rounded-lg bg-primary-container text-on-primary-container border border-primary/20 flex flex-col items-center justify-center text-center gap-1 active:scale-95 transition-all shadow-sm" data-active="true" onclick="selectDisponibilidad(this)" type="button">
+                  <span class="material-symbols-outlined text-[20px] text-primary" style="color: rgb(34, 109, 0);">
+                    bolt
+                  </span>
+                  <span class="text-xs font-bold">
+                    24/7 Urgencias
+                  </span>
                 </button>
-                <button
-                  class="disp-card p-2 rounded-lg bg-surface-container-low text-on-surface-variant border border-outline-variant/40 flex flex-col items-center justify-center text-center gap-1 active:scale-95 transition-all"
-                  data-active="false" onclick="selectDisponibilidad(this)" type="button">
-                  <span class="material-symbols-outlined text-[20px]">schedule</span>
-                  <span class="text-xs">Pauta Programada</span>
+                <button class="disp-card p-2 rounded-lg bg-surface-container-low text-on-surface-variant border border-outline-variant/40 flex flex-col items-center justify-center text-center gap-1 active:scale-95 transition-all" data-active="false" onclick="selectDisponibilidad(this)" type="button">
+                  <span class="material-symbols-outlined text-[20px]">
+                    schedule
+                  </span>
+                  <span class="text-xs">
+                    Pauta Programada
+                  </span>
                 </button>
-                <button
-                  class="disp-card p-2 rounded-lg bg-surface-container-low text-on-surface-variant border border-outline-variant/40 flex flex-col items-center justify-center text-center gap-1 active:scale-95 transition-all"
-                  data-active="false" onclick="selectDisponibilidad(this)" type="button">
-                  <span class="material-symbols-outlined text-[20px]">event_busy</span>
-                  <span class="text-xs">Fines de Semana</span>
+                <button class="disp-card p-2 rounded-lg bg-surface-container-low text-on-surface-variant border border-outline-variant/40 flex flex-col items-center justify-center text-center gap-1 active:scale-95 transition-all" data-active="false" onclick="selectDisponibilidad(this)" type="button">
+                  <span class="material-symbols-outlined text-[20px]">
+                    event_busy
+                  </span>
+                  <span class="text-xs">
+                    Fines de Semana
+                  </span>
                 </button>
               </div>
             </div>
             <!-- Documentación Vocería Previa -->
             <div class="flex flex-col gap-1 pt-1">
-              <label class="text-xs font-medium text-on-surface-variant" for="mediaExp">Experiencia Previa en Medios
-                (opcional)</label>
-              <textarea
-                class="w-full p-2.5 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none border border-outline-variant/40"
-                id="mediaExp" placeholder="ej. Entrevistas previas en radio, vocería gremial 2021-2023..."
-                rows="2"></textarea>
+              <label class="text-xs font-medium text-on-surface-variant" for="mediaExp">
+                Experiencia Previa en Medios
+                (opcional)
+              </label>
+              <textarea class="w-full p-2.5 bg-surface-container-low rounded-lg text-sm text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none border border-outline-variant/40" id="mediaExp" placeholder="ej. Entrevistas previas en radio, vocería gremial 2021-2023..." rows="2">
+              </textarea>
             </div>
           </div>
         </div>
         <!-- Quick Preview Status Banner -->
-        <div
-          class="p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/30 flex items-center justify-between">
+        <div class="p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/30 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" style="background-color: rgb(57, 169, 0);">
             </div>
-            <span class="text-xs font-semibold text-on-surface">Auto-guardado activo</span>
+            <span class="text-xs font-semibold text-on-surface">
+              Auto-guardado activo
+            </span>
           </div>
-          <span class="text-xs text-on-surface-variant">Último guardado 14:02</span>
+          <span class="text-xs text-on-surface-variant">
+            Último guardado 14:02
+          </span>
         </div>
         <!-- Bottom Actions Deck -->
         <div class="flex flex-col gap-2 pt-1 pb-8">
-          <button
-            class="w-full h-12 rounded-xl bg-primary text-on-primary font-semibold text-sm flex items-center justify-center gap-2 shadow-md hover:bg-primary/95 active:scale-[0.985] transition-all"
-            id="submitBtn" onclick="handleContinue()" type="submit"
-            style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
-            <span class="">Guardar y Continuar</span>
-            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          <button class="w-full h-12 rounded-xl bg-primary text-on-primary font-semibold text-sm flex items-center justify-center gap-2 shadow-md hover:bg-primary/95 active:scale-[0.985] transition-all" id="submitBtn" onclick="handleContinue()" type="submit" style="background-color: rgb(57, 169, 0); color: rgb(255, 255, 255);">
+            <span class="">
+              Guardar y Continuar
+            </span>
+            <span class="material-symbols-outlined text-[20px]">
+              arrow_forward
+            </span>
           </button>
-          <button
-            class="w-full h-12 rounded-xl bg-surface-container-highest/60 text-on-surface font-semibold text-sm flex items-center justify-center gap-2 hover:bg-surface-container-highest active:scale-[0.985] transition-all border border-outline-variant/30"
-            onclick="saveDraftNotification()" type="button">
-            <span class="material-symbols-outlined text-[20px] text-on-surface-variant">bookmark</span>
-            <span class="">Guardar como Borrador</span>
+          <button class="w-full h-12 rounded-xl bg-surface-container-highest/60 text-on-surface font-semibold text-sm flex items-center justify-center gap-2 hover:bg-surface-container-highest active:scale-[0.985] transition-all border border-outline-variant/30" onclick="saveDraftNotification()" type="button">
+            <span class="material-symbols-outlined text-[20px] text-on-surface-variant">
+              bookmark
+            </span>
+            <span class="">
+              Guardar como Borrador
+            </span>
           </button>
         </div>
       </form>
       <!-- Interactive Floating Toast Container -->
-      <div
-        class="fixed top-20 left-4 right-4 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex justify-center"
-        id="toastNotification">
-        <div
-          class="bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 border border-outline-variant/20">
-          <span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">check_circle</span>
-          <span class="text-xs font-semibold" id="toastMessage">Borrador guardado exitosamente</span>
+      <div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex justify-center" id="toastNotification">
+        <div class="bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 border border-outline-variant/20">
+          <span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">
+            check_circle
+          </span>
+          <span class="text-xs font-semibold" id="toastMessage">
+            Borrador guardado exitosamente
+          </span>
         </div>
       </div>
     </div>
@@ -561,25 +606,41 @@
       }
     </script>
   </main>
-  <nav
-    class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.04)] border-t border-outline-variant/30"
-    data-active-classes="text-primary font-semibold">
-    <div class="flex justify-around items-center h-16 px-1"><a
-        class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors"
-        data-path="directorio" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span
-          class="text-[11px] font-medium mt-0.5">Directorio</span></a><a aria-current="page"
-        class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-primary font-semibold"
-        data-path="registro" href="#" style="color: rgb(34, 109, 0);"><span
-          class="material-symbols-outlined text-[24px]">person_add</span><span
-          class="text-[11px] font-bold mt-0.5">Registro</span></a><a
-        class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors"
-        data-path="voceros" href="#"><span class="material-symbols-outlined text-[24px]">campaign</span><span
-          class="text-[11px] font-medium mt-0.5">Voceros</span></a><a
-        class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors"
-        data-path="mi-perfil" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span
-          class="text-[11px] font-medium mt-0.5">Mi Perfil</span></a></div>
+  <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.04)] border-t border-outline-variant/30" data-active-classes="text-primary font-semibold">
+    <div class="flex justify-around items-center h-16 px-1">
+      <a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="directorio" href="#">
+        <span class="material-symbols-outlined text-[24px]">
+          badge
+        </span>
+        <span class="text-[11px] font-medium mt-0.5">
+          Directorio
+        </span>
+      </a>
+      <a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-primary font-semibold" data-path="registro" href="#" style="color: rgb(34, 109, 0);">
+        <span class="material-symbols-outlined text-[24px]">
+          person_add
+        </span>
+        <span class="text-[11px] font-bold mt-0.5">
+          Registro
+        </span>
+      </a>
+      <a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="voceros" href="#">
+        <span class="material-symbols-outlined text-[24px]">
+          campaign
+        </span <span class="text-[11px] font-medium mt-0.5">
+        Voceros
+        </span>
+      </a>
+      <a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mi-perfil" href="#">
+        <span class="material-symbols-outlined text-[24px]">
+          account_circle
+        </span>
+        <span class="text-[11px] font-medium mt-0.5">
+          Mi Perfil
+        </span>
+      </a>
+    </div>
   </nav>
 
 </body>
-
 </html>
