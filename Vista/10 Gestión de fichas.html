@@ -1,4 +1,3 @@
-<!--Tipo de documento-->
 <!DOCTYPE html>
 <!-- Raíz del documento. lang="es" indica el idioma a lectores de pantalla, traductores y buscadores -->
 <html class="h-full" lang="es">
@@ -6,7 +5,8 @@
   <!-- Codificación de caracteres: necesaria para tildes y la ñ -->
   <meta charset="utf-8" />
   <!-- Diseño móvil: ancho del dispositivo, sin zoom y a pantalla completa (viewport-fit=cover para pantallas con notch) -->
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport" />
   <!-- Metadato propio de la plataforma de diseño; no afecta al navegador -->
   <meta content="mobile_tab" name="shell-type" />
   <!-- Título que aparece en la pestaña del navegador -->
@@ -14,10 +14,13 @@
   <!-- Inter: tipografía del texto (pesos 400 a 700) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <!-- Material Symbols: fuente de íconos (campana, lupa, grupos, etc.) -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
   <!--CSS del encabezado-->
   <style>
     @layer base {
+
       html,
       body {
         width: 100vw;
@@ -25,25 +28,32 @@
         margin: 0;
         padding: 0;
       }
+
       body {
         overscroll-behavior: none;
       }
+
       .pb-safe {
         padding-bottom: env(safe-area-inset-bottom, 0px);
       }
+
       .pt-safe {
         padding-top: env(safe-area-inset-top, 0px);
       }
+
       main>:first-child {
         margin-top: 0 !important;
       }
+
       main>:last-child {
         margin-bottom: 0 !important;
       }
     }
+
     ::-webkit-scrollbar {
       display: none;
     }
+
     body {
       min-height: max(884px, 100dvh);
     }
@@ -57,34 +67,35 @@
       darkMode: "class", theme: {
         extend:
         {
-          colors: 
+          colors:
           {
-            "secondary-fixed": "#cde5ff", "surface-variant": "#e2e2e2", "surface-container-low": "#f3f3f4", "inverse-primary": "#6fdf43", 
-          secondary: "#396285", "surface-container-high": "#e8e8e8", "on-tertiary-fixed-variant": "#454747", "tertiary-fixed": "#e2e2e2", "secondary-container": "#add6fe", "tertiary-container": "#929393", "surface-container": "#eeeeee", "on-surface-variant": "#3f4a38", "surface-dim": "#dadada", "tertiary-fixed-dim": "#c6c6c7", "on-secondary-container": "#335d80", "inverse-surface": "#2f3131", "on-surface": "#1a1c1c",
-          outline: "#6f7b66", "on-background": "#1a1c1c", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#1e4a6c", "on-tertiary-container": "#2a2c2c", 
-          primary: "#226d00", "on-primary-container": "#0c3400", "surface-container-lowest": "#ffffff", "surface-tint": "#226d00", "on-error-container": "#93000a", "surface-bright": "#f9f9f9", "primary-fixed": "#8afd5d", "on-tertiary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#becbb3", "on-primary-fixed": "#052100", 
-          background: "#f9f9f9", 
-          error: "#ba1a1a", "on-primary-fixed-variant": "#185200", "primary-fixed-dim": "#6fdf43", "on-secondary": "#ffffff", "secondary-fixed-dim": "#a2cbf3", 
-          surface: "#f9f9f9", "on-error": "#ffffff", "primary-container": "#39a900", "surface-container-highest": "#e2e2e2", 
-          tertiary: "#5d5f5f", "error-container": "#ffdad6", "on-secondary-fixed": "#001d32"
-        },
-          borderRadius: 
+            "secondary-fixed": "#cde5ff", "surface-variant": "#e2e2e2", "surface-container-low": "#f3f3f4", "inverse-primary": "#6fdf43",
+            secondary: "#396285", "surface-container-high": "#e8e8e8", "on-tertiary-fixed-variant": "#454747", "tertiary-fixed": "#e2e2e2", "secondary-container": "#add6fe", "tertiary-container": "#929393", "surface-container": "#eeeeee", "on-surface-variant": "#3f4a38", "surface-dim": "#dadada", "tertiary-fixed-dim": "#c6c6c7", "on-secondary-container": "#335d80", "inverse-surface": "#2f3131", "on-surface": "#1a1c1c",
+            outline: "#6f7b66", "on-background": "#1a1c1c", "inverse-on-surface": "#f0f1f1", "on-secondary-fixed-variant": "#1e4a6c", "on-tertiary-container": "#2a2c2c",
+            primary: "#226d00", "on-primary-container": "#0c3400", "surface-container-lowest": "#ffffff", "surface-tint": "#226d00", "on-error-container": "#93000a", "surface-bright": "#f9f9f9", "primary-fixed": "#8afd5d", "on-tertiary-fixed": "#1a1c1c", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline-variant": "#becbb3", "on-primary-fixed": "#052100",
+            background: "#f9f9f9",
+            error: "#ba1a1a", "on-primary-fixed-variant": "#185200", "primary-fixed-dim": "#6fdf43", "on-secondary": "#ffffff", "secondary-fixed-dim": "#a2cbf3",
+            surface: "#f9f9f9", "on-error": "#ffffff", "primary-container": "#39a900", "surface-container-highest": "#e2e2e2",
+            tertiary: "#5d5f5f", "error-container": "#ffdad6", "on-secondary-fixed": "#001d32"
+          },
+          borderRadius:
           {
             DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"
           },
-          spacing: 
-          {margin: "1rem", "margin-sm": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-lg": "1.5rem", "gutter-sm": "0.75rem", "space-sm": "0.5rem", "margin-lg": "2rem", 
-          gutter: "1rem", "space-xxl": "2rem"
-        },
-          fontFamily: 
+          spacing:
           {
-            "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], 
-          headline: ["Inter"], 
-          display: ["Inter"], 
-          body: ["Inter"], 
-          label: ["Inter"]
-        },
-          fontSize: 
+            margin: "1rem", "margin-sm": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-lg": "1.5rem", "gutter-sm": "0.75rem", "space-sm": "0.5rem", "margin-lg": "2rem",
+            gutter: "1rem", "space-xxl": "2rem"
+          },
+          fontFamily:
+          {
+            "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"],
+            headline: ["Inter"],
+            display: ["Inter"],
+            body: ["Inter"],
+            label: ["Inter"]
+          },
+          fontSize:
           {
             "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600"}],
             "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}],
@@ -100,13 +111,16 @@
 </head>
 <!--BODY: todo lo que se ve en pantalla. Tiene tres bloques: encabezado
      fijo arriba, el contenido principal y navegación fija abajo.-->
+
 <body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen">
   <!--SECCIÓN 1 - ENCABEZADO FIJO (barra superior)
      Marca a la izquierda; notificaciones y perfil a la derecha.
      Se mantiene visible al hacer scroll. pt-safe respeta el notch.-->
-  <header class="fixed top-0 w-full z-50 pt-safe h-[calc(4rem+env(safe-area-inset-top,0px))] px-margin flex items-center justify-between gap-space-sm bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <header
+    class="fixed top-0 w-full z-50 pt-safe h-[calc(4rem+env(safe-area-inset-top,0px))] px-margin flex items-center justify-between gap-space-sm bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <p class="flex items-center gap-space-sm min-w-0">
-      <img alt="Portal Académico Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W7XncRTv_MWlwveEwRB8C_GcCmX4b3LC-qfHXt4zeWl0roLdwRmpf77dZm2qpiF776vo__bRG8OlJ1nRNfccotIkSC8XN_SNwODsfGwWbrgXepz53c29yM5M9sh6IrZiRLsWAHK3JeBGbn0FHEI3u8fibRkF8MhN32MOsQjCzOKLRMrg0EpkhO5prFV7wDr4_bnERgpbWLj6xX2vYuu3Nurkb1oJV1swwofwF0qJE5Mg" />
+      <img alt="Portal Académico Logo" class="h-8 w-auto object-contain flex-shrink-0"
+        src="https://lh3.googleusercontent.com/aida/AEtjO1W7XncRTv_MWlwveEwRB8C_GcCmX4b3LC-qfHXt4zeWl0roLdwRmpf77dZm2qpiF776vo__bRG8OlJ1nRNfccotIkSC8XN_SNwODsfGwWbrgXepz53c29yM5M9sh6IrZiRLsWAHK3JeBGbn0FHEI3u8fibRkF8MhN32MOsQjCzOKLRMrg0EpkhO5prFV7wDr4_bnERgpbWLj6xX2vYuu3Nurkb1oJV1swwofwF0qJE5Mg" />
       <span class="flex flex-col min-w-0">
         <span class="font-title-lg text-title-lg text-primary truncate leading-tight">
           Portal Académico
@@ -119,17 +133,21 @@
     <!-- Acciones del usuario. menu es la etiqueta semántica para una barra de acciones; cada botón va en un li -->
     <menu class="flex items-center gap-space-xs flex-shrink-0">
       <li>
-        <button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors relative">
+        <button aria-label="Notificaciones"
+          class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface transition-colors relative">
           <span class="material-symbols-outlined text-[22px]" aria-hidden="true">
             notifications
           </span>
-          <span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface" aria-hidden="true">
+          <span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"
+            aria-hidden="true">
           </span>
         </button>
       </li>
       <li>
-        <button aria-label="Perfil de usuario" class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full ring-1 ring-outline-variant hover:ring-secondary transition-all">
-          <img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk98Erfkp1cw-jicXoC6MjkQIxhu-eHrSsn03Kpbifly75ZRQjOqL3AwbCqKvd3G-QlAWPioGQc3PEJcQUB7HE0WNohzYx_8FgVXBh9ZW6CFkueJJ__wWoOnHCSGyDT87QemumqVRHh1rR2QPqv1yzPaGIid6fnfECS73dHMFD0Doqh_BgbY1yIfcmY8SzUmrD52PH90yn9Khqa1tLEwtgQMm8JerMHjPCwxe_dFpf" />
+        <button aria-label="Perfil de usuario"
+          class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full ring-1 ring-outline-variant hover:ring-secondary transition-all">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk98Erfkp1cw-jicXoC6MjkQIxhu-eHrSsn03Kpbifly75ZRQjOqL3AwbCqKvd3G-QlAWPioGQc3PEJcQUB7HE0WNohzYx_8FgVXBh9ZW6CFkueJJ__wWoOnHCSGyDT87QemumqVRHh1rR2QPqv1yzPaGIid6fnfECS73dHMFD0Doqh_BgbY1yIfcmY8SzUmrD52PH90yn9Khqa1tLEwtgQMm8JerMHjPCwxe_dFpf" />
         </button>
       </li>
     </menu>
@@ -151,7 +169,9 @@
             Gestión de fichas
           </h1>
         </hgroup>
-        <button aria-label="Crear Nueva Ficha" class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm active:scale-95 transition-transform" id="btnCreateFicha">
+        <button aria-label="Crear Nueva Ficha"
+          class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm active:scale-95 transition-transform"
+          id="btnCreateFicha">
           <span class="material-symbols-outlined text-[18px]" aria-hidden="true">
             add_circle
           </span>
@@ -167,8 +187,12 @@
             search
           </span>
         </span>
-        <input class="w-full h-11 pl-10 pr-10 rounded-xl bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="inputSearchFichas" placeholder="Buscar por ficha o programa (ej. 2670182 o ADSO)..." type="search" aria-label="Buscar fichas" />
-        <button aria-label="Limpiar búsqueda" class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface">
+        <input
+          class="w-full h-11 pl-10 pr-10 rounded-xl bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary transition-all"
+          id="inputSearchFichas" placeholder="Buscar por ficha o programa (ej. 2670182 o ADSO)..." type="search"
+          aria-label="Buscar fichas" />
+        <button aria-label="Limpiar búsqueda"
+          class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface">
           <span class="material-symbols-outlined text-[18px]" aria-hidden="true">
             tune
           </span>
@@ -177,7 +201,8 @@
       <!-- Chips de filtro con scroll horizontal. Cada chip es un li con un button; el script marca el activo (clase "active" y fondo verde) -->
       <ul class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-0.5 no-scrollbar -mx-margin px-margin">
         <li class="shrink-0">
-          <button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap active bg-primary text-on-primary shadow-sm">
+          <button
+            class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap active bg-primary text-on-primary shadow-sm">
             <span>
               Todas
               (48)
@@ -185,7 +210,8 @@
           </button>
         </li>
         <li class="shrink-0">
-          <button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
+          <button
+            class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
             <span class="material-symbols-outlined text-[15px]" aria-hidden="true">
               meeting_room
             </span>
@@ -195,7 +221,8 @@
           </button>
         </li>
         <li class="shrink-0">
-          <button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
+          <button
+            class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
             <span class="material-symbols-outlined text-[15px]" aria-hidden="true">
               laptop_chromebook
             </span>
@@ -205,7 +232,8 @@
           </button>
         </li>
         <li class="shrink-0">
-          <button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
+          <button
+            class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
             <span class="w-2 h-2 rounded-full bg-secondary" aria-hidden="true">
             </span>
             <span>
@@ -214,7 +242,8 @@
           </button>
         </li>
         <li class="shrink-0">
-          <button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
+          <button
+            class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
             <span class="w-2 h-2 rounded-full bg-surface-tint" aria-hidden="true">
             </span>
             <span>
@@ -223,7 +252,8 @@
           </button>
         </li>
         <li class="shrink-0">
-          <button class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
+          <button
+            class="filter-chip flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
             <span class="material-symbols-outlined text-[15px]" aria-hidden="true">
               apartment
             </span>
@@ -237,17 +267,20 @@
     <!--SECCIÓN 3 - RESUMEN DE INDICADORES (KPI)
      Banner verde con tres tarjetas: fichas activas, aprendices y
      jornadas. Cada tarjeta es un li dentro de una lista.-->
-    <section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-primary p-space-md text-on-primary shadow-md flex flex-col space-y-space-md">
+    <section
+      class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-primary p-space-md text-on-primary shadow-md flex flex-col space-y-space-md">
       <header class="flex items-center justify-between">
         <h2 class="flex items-center gap-2 font-label-lg text-label-lg text-primary-fixed">
-          <span class="w-7 h-7 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center backdrop-blur-sm">
+          <span
+            class="w-7 h-7 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center backdrop-blur-sm">
             <span class="material-symbols-outlined text-[18px] text-secondary-fixed" aria-hidden="true">
               monitoring
             </span>
           </span>
           Panorama Formativo Activo
         </h2>
-        <p class="font-label-sm text-label-sm bg-surface-container-lowest/15 px-2 py-0.5 rounded-full text-surface-bright">
+        <p
+          class="font-label-sm text-label-sm bg-surface-container-lowest/15 px-2 py-0.5 rounded-full text-surface-bright">
           Periodo 2024-II</p>
       </header>
       <ul class="grid grid-cols-3 gap-2 pt-1">
@@ -324,7 +357,8 @@
         <span class="font-title-lg text-title-lg text-on-surface">
           Grupos Formativos
         </span>
-        <span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-bold">
+        <span
+          class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-bold">
           3
           en pantalla
         </span>
@@ -341,25 +375,28 @@
      progreso y acciones rápidas.-->
     <section aria-label="Listado de fichas" class="flex flex-col space-y-space-md">
       <!-- Ficha 2670182 - ADSO, jornada diurna, en ejecución -->
-      <article class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+      <article
+        class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
         <header class="flex items-start justify-between gap-space-sm mb-space-xs">
           <hgroup class="flex flex-col min-w-0">
             <p class="flex items-center gap-2">
-              <span class="font-label-sm text-label-sm font-bold tracking-wider text-secondary bg-secondary-fixed/20 px-2 py-0.5 rounded">
+              <span
+                class="font-label-sm text-label-sm font-bold tracking-wider text-secondary bg-secondary-fixed/20 px-2 py-0.5 rounded">
                 FICHA 2670182
               </span>
               <span class="font-label-sm text-label-sm text-outline flex items-center gap-0.5">
                 <span class="material-symbols-outlined text-[13px]" aria-hidden="true">
                   wb_sunny
                 </span>
-                 Diurna
-                </span>
+                Diurna
+              </span>
             </p>
             <h2 class="font-title-lg text-title-lg text-primary mt-1 line-clamp-2 leading-snug">
               Tecnología en Análisis y Desarrollo de Software (ADSO)
             </h2>
           </hgroup>
-          <span class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+          <span
+            class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
             <span class="w-1.5 h-1.5 rounded-full bg-secondary" aria-hidden="true">
             </span>
             En Ejecución
@@ -377,15 +414,17 @@
         <!-- Instructor líder (con avatar de iniciales) y cantidad de aprendices matriculados, en una lista de dos columnas -->
         <ul class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-low mb-space-md">
           <li class="flex items-center gap-2 min-w-0 p-1">
-            <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+            <span
+              class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
               LG
             </span>
             <p class="flex flex-col min-w-0">
               <span class="font-label-sm text-[10px] text-outline uppercase">
-              Instructor Líder
+                Instructor Líder
               </span>
               <span class="font-label-md text-label-md text-on-surface font-semibold truncate">
-                Ing. Laura Gómez</span></p>
+                Ing. Laura Gómez</span>
+            </p>
           </li>
           <li class="flex items-center gap-2 min-w-0 p-1 justify-end">
             <p class="flex flex-col text-right min-w-0">
@@ -396,7 +435,8 @@
                 32 Aprendices
               </span>
             </p>
-            <span class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
+            <span
+              class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
               <span class="material-symbols-outlined text-[17px]" aria-hidden="true">
                 groups
               </span>
@@ -413,13 +453,17 @@
               65% Avanzado
             </span>
           </span>
-          <progress class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-secondary [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-secondary [&::-moz-progress-bar]:rounded-full" value="65" max="100" aria-label="Avance de la ficha 2670182">
+          <progress
+            class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-secondary [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-secondary [&::-moz-progress-bar]:rounded-full"
+            value="65" max="100" aria-label="Avance de la ficha 2670182">
             65%
           </progress>
         </p>
         <!-- Pie de la tarjeta: botones de acción rápida. El script les da un pequeño efecto al tocarlos -->
         <footer class="pt-space-xs flex items-center justify-between gap-1">
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Ver lista de aprendices">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Ver lista de aprendices">
             <span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">
               assignment_ind
             </span>
@@ -427,7 +471,9 @@
               Aprendices
             </span>
           </button>
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Tomar lista o registrar inasistencias">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Tomar lista o registrar inasistencias">
             <span class="material-symbols-outlined text-[20px] text-error" aria-hidden="true">
               event_available
             </span>
@@ -435,7 +481,9 @@
               Asistencia
             </span>
           </button>
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Cronograma y horarios">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Cronograma y horarios">
             <span class="material-symbols-outlined text-[20px] text-surface-tint" aria-hidden="true">
               calendar_month
             </span>
@@ -443,7 +491,9 @@
               Cronograma
             </span>
           </button>
-          <button aria-label="Más opciones de ficha" class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors" title="Editar o finalizar ficha">
+          <button aria-label="Más opciones de ficha"
+            class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors"
+            title="Editar o finalizar ficha">
             <span class="material-symbols-outlined text-[20px]" aria-hidden="true">
               more_vert
             </span>
@@ -454,25 +504,28 @@
         </footer>
       </article>
       <!-- Ficha 2589314 - Redes y Telecomunicaciones, jornada mixta, etapa productiva -->
-      <article class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+      <article
+        class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
         <header class="flex items-start justify-between gap-space-sm mb-space-xs">
           <hgroup class="flex flex-col min-w-0">
             <p class="flex items-center gap-2">
-              <span class="font-label-sm text-label-sm font-bold tracking-wider text-primary-container bg-surface-container-high px-2 py-0.5 rounded">
+              <span
+                class="font-label-sm text-label-sm font-bold tracking-wider text-primary-container bg-surface-container-high px-2 py-0.5 rounded">
                 FICHA 2589314
               </span>
               <span class="font-label-sm text-label-sm text-outline flex items-center gap-0.5">
                 <span class="material-symbols-outlined text-[13px]" aria-hidden="true">
                   sync_alt
                 </span>
-                 Mixta
-                </span>
+                Mixta
+              </span>
             </p>
             <h2 class="font-title-lg text-title-lg text-primary mt-1 line-clamp-2 leading-snug">
               Técnico en Redes y Telecomunicaciones
             </h2>
           </hgroup>
-          <span class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm font-semibold">
+          <span
+            class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm font-semibold">
             <span class="w-1.5 h-1.5 rounded-full bg-surface-tint" aria-hidden="true">
             </span>
             Etapa Productiva
@@ -490,7 +543,8 @@
         <!-- Instructor líder (con avatar de iniciales) y cantidad de aprendices matriculados, en una lista de dos columnas -->
         <ul class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-low mb-space-md">
           <li class="flex items-center gap-2 min-w-0 p-1">
-            <span class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+            <span
+              class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
               MM
             </span>
             <p class="flex flex-col min-w-0">
@@ -499,10 +553,11 @@
               </span>
               <span class="font-label-md text-label-md text-on-surface font-semibold truncate">
                 Martín Morales
-              </span></p>
+              </span>
+            </p>
           </li>
           <li class="flex items-center gap-2 min-w-0 p-1 justify-end">
-            <p class="flex flex-col text-right min-w-0">            
+            <p class="flex flex-col text-right min-w-0">
             </p>
             <span class="font-label-sm text-[10px] text-outline uppercase">
               Matriculados
@@ -510,8 +565,9 @@
             <span class="font-label-md text-label-md text-on-surface font-semibold">
               28 Aprendices
             </span>
-          </p>
-            <span class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
+            </p>
+            <span
+              class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
               <span class="material-symbols-outlined text-[17px]" aria-hidden="true">
                 groups
               </span>
@@ -528,13 +584,17 @@
               88% Final
             </span>
           </span>
-          <progress class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-surface-tint [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-surface-tint [&::-moz-progress-bar]:rounded-full" value="88" max="100" aria-label="Avance de la ficha 2589314">
+          <progress
+            class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-surface-tint [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-surface-tint [&::-moz-progress-bar]:rounded-full"
+            value="88" max="100" aria-label="Avance de la ficha 2589314">
             88%
           </progress>
         </p>
         <!-- Pie de la tarjeta: botones de acción rápida. El script les da un pequeño efecto al tocarlos -->
         <footer class="pt-space-xs flex items-center justify-between gap-1">
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Ver lista de aprendices">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Ver lista de aprendices">
             <span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">
               assignment_ind
             </span>
@@ -542,7 +602,9 @@
               Aprendices
             </span>
           </button>
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Bitácoras y seguimientos">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Bitácoras y seguimientos">
             <span class="material-symbols-outlined text-[20px] text-surface-tint" aria-hidden="true">
               fact_check
             </span>
@@ -550,7 +612,9 @@
               Bitácoras
             </span>
           </button>
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Cronograma y horarios">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Cronograma y horarios">
             <span class="material-symbols-outlined text-[20px] text-surface-tint" aria-hidden="true">
               calendar_month
             </span>
@@ -558,7 +622,9 @@
               Cronograma
             </span>
           </button>
-          <button aria-label="Más opciones de ficha" class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors" title="Editar o certificar ficha">
+          <button aria-label="Más opciones de ficha"
+            class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors"
+            title="Editar o certificar ficha">
             <span class="material-symbols-outlined text-[20px]" aria-hidden="true">
               more_vert
             </span>
@@ -569,26 +635,29 @@
         </footer>
       </article>
       <!-- Ficha 2710405 - Gestión Administrativa, jornada nocturna, en ejecución -->
-      <article class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+      <article
+        class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
         <header class="flex items-start justify-between gap-space-sm mb-space-xs">
           <hgroup class="flex flex-col min-w-0">
             <p class="flex items-center gap-2">
-              <span class="font-label-sm text-label-sm font-bold tracking-wider text-secondary bg-secondary-fixed/20 px-2 py-0.5 rounded">
+              <span
+                class="font-label-sm text-label-sm font-bold tracking-wider text-secondary bg-secondary-fixed/20 px-2 py-0.5 rounded">
                 FICHA 2710405
               </span>
               <span class="font-label-sm text-label-sm text-outline flex items-center gap-0.5">
                 <span class="material-symbols-outlined text-[13px]" aria-hidden="true">
                   bedtime
                 </span>
-                 Nocturna
-                </span>
+                Nocturna
+              </span>
             </p>
             <h2 class="font-title-lg text-title-lg text-primary mt-1 line-clamp-2 leading-snug">
               Tecnólogo en Gestión Administrativa
             </h2>
           </hgroup>
-          <span class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full bg-secondary" aria-hidden="true">            
+          <span
+            class="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary" aria-hidden="true">
             </span>
             En Ejecución
           </span>
@@ -605,16 +674,17 @@
         <!-- Instructor líder (con avatar de iniciales) y cantidad de aprendices matriculados, en una lista de dos columnas -->
         <ul class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-low mb-space-md">
           <li class="flex items-center gap-2 min-w-0 p-1">
-            <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+            <span
+              class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
               SP
             </span>
             <p class="flex flex-col min-w-0"><span class="font-label-sm text-[10px] text-outline uppercase">
-              Instructor Líder
-            </span>
-            <span class="font-label-md text-label-md text-on-surface font-semibold truncate">
-              Sonia Parra
-            </span>
-          </p>
+                Instructor Líder
+              </span>
+              <span class="font-label-md text-label-md text-on-surface font-semibold truncate">
+                Sonia Parra
+              </span>
+            </p>
           </li>
           <li class="flex items-center gap-2 min-w-0 p-1 justify-end">
             <p class="flex flex-col text-right min-w-0">
@@ -625,7 +695,8 @@
                 35 Aprendices
               </span>
             </p>
-            <span class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
+            <span
+              class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
               <span class="material-symbols-outlined text-[17px]" aria-hidden="true">
                 groups
               </span>
@@ -642,13 +713,17 @@
               30% Avanzado
             </span>
           </span>
-          <progress class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-secondary [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-secondary [&::-moz-progress-bar]:rounded-full" value="30" max="100" aria-label="Avance de la ficha 2710405">
+          <progress
+            class="w-full h-2 rounded-full overflow-hidden appearance-none bg-surface-container [&::-webkit-progress-bar]:bg-surface-container [&::-webkit-progress-value]:bg-secondary [&::-webkit-progress-value]:rounded-full [&::-moz-progress-bar]:bg-secondary [&::-moz-progress-bar]:rounded-full"
+            value="30" max="100" aria-label="Avance de la ficha 2710405">
             30%
           </progress>
         </p>
         <!-- Pie de la tarjeta: botones de acción rápida. El script les da un pequeño efecto al tocarlos -->
         <footer class="pt-space-xs flex items-center justify-between gap-1">
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Ver lista de aprendices">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Ver lista de aprendices">
             <span class="material-symbols-outlined text-[20px] text-secondary" aria-hidden="true">
               assignment_ind
             </span>
@@ -656,7 +731,9 @@
               Aprendices
             </span>
           </button>
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Tomar lista o registrar inasistencias">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Tomar lista o registrar inasistencias">
             <span class="material-symbols-outlined text-[20px] text-error" aria-hidden="true">
               event_available
             </span>
@@ -664,7 +741,9 @@
               Asistencia
             </span>
           </button>
-          <button class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors" title="Cronograma y horarios">
+          <button
+            class="quick-action flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-lg hover:bg-surface-container-low text-on-surface-variant active:text-secondary transition-colors"
+            title="Cronograma y horarios">
             <span class="material-symbols-outlined text-[20px] text-surface-tint" aria-hidden="true">
               calendar_month
             </span>
@@ -672,7 +751,9 @@
               Cronograma
             </span>
           </button>
-          <button aria-label="Más opciones de ficha" class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors" title="Editar o finalizar ficha">
+          <button aria-label="Más opciones de ficha"
+            class="quick-action w-10 flex flex-col items-center justify-center py-2 rounded-lg hover:bg-surface-container-low text-outline hover:text-on-surface transition-colors"
+            title="Editar o finalizar ficha">
             <span class="material-symbols-outlined text-[20px]" aria-hidden="true">
               more_vert
             </span>
@@ -687,7 +768,8 @@
      aside es contenido complementario: no es parte del listado.
      Recuerda exportar reportes de asistencia o validar cupos.-->
     <aside class="rounded-xl bg-surface-container p-space-md flex items-center gap-space-md">
-      <span class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0">
+      <span
+        class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm flex-shrink-0">
         <span class="material-symbols-outlined text-[26px]" aria-hidden="true">
           school
         </span>
@@ -712,12 +794,15 @@
      Menú principal con cinco destinos. La pestaña actual (Fichas)
      tiene aria-current="page" y color distinto. Los href="#" son
      marcadores: en producción deben apuntar a cada página real.-->
-  <nav aria-label="Navegación principal" class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-secondary">
+  <nav aria-label="Navegación principal"
+    class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]"
+    data-active-classes="text-secondary">
     <ul class="flex items-center justify-around h-16 px-space-xs">
       <li>
-        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface" data-path="usuarios" href="#">
+        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface"
+          data-path="usuarios" href="#">
           <span class="material-symbols-outlined text-[22px]" aria-hidden="true">
-             group
+            group
           </span>
           <span class="font-label-sm text-label-sm mt-0.5">
             Usuarios
@@ -736,7 +821,8 @@
         </a>
       </li>
       <li>
-        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface" data-path="roles" href="#">
+        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface"
+          data-path="roles" href="#">
           <span class="material-symbols-outlined text-[22px]" aria-hidden="true">
             badge
           </span>
@@ -746,7 +832,8 @@
         </a>
       </li>
       <li>
-        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-secondary" aria-current="page" data-path="fichas" href="#">
+        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-secondary"
+          aria-current="page" data-path="fichas" href="#">
           <span class="material-symbols-outlined text-[22px]" aria-hidden="true">
             folder_shared
           </span>
@@ -756,7 +843,8 @@
         </a>
       </li>
       <li>
-        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface" data-path="mas" href="#">
+        <a class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-on-surface-variant hover:text-on-surface"
+          data-path="mas" href="#">
           <span class="material-symbols-outlined text-[22px]" aria-hidden="true">
             more_horiz
           </span>
@@ -800,4 +888,5 @@
     }
   </script>
 </body>
+
 </html>
